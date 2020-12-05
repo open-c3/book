@@ -1,0 +1,117 @@
+{
+    "title" : "OPEN-C3(open-c3)",
+    "links" : {
+        "sidebar" : {
+            "Home" : "http://open-c3.github.io/index.html"
+        }
+    },
+    "variables": {
+        "contact": "lijinfeng2011@gmail.com"
+    },
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "plugins": [
+        "-lunr",
+         "-search",
+         "search-plus",
+         "versions-select",
+         "splitter",
+         "tbfed-pagefooter",
+         "expandable-chapters-small",
+         "sectionx",
+         "github-buttons",
+         "simple-page-toc",
+         "anchors",
+         "todo",
+         "alerts",
+         "emphasize",
+         "anchor-navigation-ex",
+         "ad",
+         "ace",
+         "favicon",
+         "mermaid",
+         "terminal",
+         "github",
+         "copy-code-button",
+         "-sharing", 
+         "sharing-plus",
+         "chart"
+        ],
+    "pluginsConfig": {
+        "fontsettings": {
+            "family": "serif",
+            "size": 1
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "tbfed-pagefooter": {
+             "copyright":"Copyright 2020 - 2020.",
+             "modify_label": "该文件修订时间：",
+             "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "expandable-chapters-small":{},
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "open-c3",
+                    "type": "follow",
+                    "size": "small",
+                    "width": "180",
+                    "count": true
+                },
+                {
+                    "user": "open-c3",
+                    "repo": "open-c3",
+                    "type": "star",
+                    "size": "small"
+                }
+            ]
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "ad": {
+            "contentTop": "",
+            "contentBottom": ""
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        },
+        "github": {
+            "url": "https://github.com/open-c3"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper", "linkedin",
+                "pocket", "stumbleupon"
+            ]
+        }
+    }
+}
