@@ -1,10 +1,5 @@
 {
     "title" : "OPEN-C3(open-c3)",
-    "links" : {
-        "sidebar" : {
-            "Home" : "http://open-c3.github.io/index.html"
-        }
-    },
     "variables": {
         "contact": "lijinfeng2011@gmail.com"
     },
