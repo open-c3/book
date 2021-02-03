@@ -6,7 +6,7 @@
     * [单机版](/单机版安装/README.md)
     * [集群版](/集群版安装/README.md)
 
-* [使用手册](/TODO)
+* [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
     * [快速执行脚本](/快速执行脚本/README.md)
     * [快速分发文件](/快速分发文件/README.md)
@@ -15,6 +15,7 @@
     * [作业管理](/作业管理/README.md)
     * [定时任务](/定时任务/README.md)
     * [分组作业](/分组作业/README.md)
+    * [流水线](/流水线/README.md)
     * [机器分批](/TODO)
     * [基础信息管理](/TODO)
     * [作业配置和使用](/TODO)
