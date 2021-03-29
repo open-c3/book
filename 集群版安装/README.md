@@ -230,18 +230,69 @@ EOF
 /data/open-c3/Installer/scripts/cluster.sh  init bar
 ```
 
+## 初始化数据库
+
+### 通过程序部署的数据库容器实例
+```
+1. 在job配置文件中添加c3-database字段，如上JOB的配置。
+2. 执行初始化：/data/open-c3/Installer/cluster/deploy/c3-database.pl -e bar
+3. 在部署数据库的机器上执行：/data/Software/mydan/Installer/cluster/init.sh
+4. 在初始化一次：/data/open-c3/Installer/cluster/deploy/c3-database.pl -e bar
+
+```
+
+### 使用已有数据库实例
+
+通过下面文件各种对数据库进行初始化
+```
+/data/open-c3/AGENT/schema.sql
+/data/open-c3/CI/schema.sql
+/data/open-c3/Connector/schema.sql
+/data/open-c3/JOB/schema.sql
+/data/open-c3/JOBX/schema.sql
+```
+
 ## 部署应用
 
 ```
-/data/open-c3/Installer/scripts/cluster.sh  deploy bar
+/data/open-c3/Installer/scripts/cluster.sh deploy  --envname bar --version 20210316
 ```
 
 ## 通过浏览器访问服务
 
-通过 http://10.10.10.1 http://10.10.10.2 http://10.10.10.3 访问集群
+### 直接访问
+通过 http://10.10.10.1:88 http://10.10.10.2:88 http://10.10.10.3:88 访问集群
 
 注： 可以申请个域名执行这三个地址
 
+### 绑定域名访问
+
+```
+cd /etc/nginx/conf.d && cp open-c3.conf open-c3.pri.conf
+cat open-c3.pri.conf 
+server {
+    listen       80;
+    server_name  myopenc3.myopenc3.org; #这里改成自己的域名
+
+    location / {
+        proxy_pass http://127.0.0.1:88;
+
+        proxy_redirect    off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Host $host:$server_port;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+
+```
+
+### 使用正式域名访问
+
+通过自己绑定的域名访问服务。
 
 ### 登录页
 ![登录页面](/单机版安装/images/登录页面.png)
