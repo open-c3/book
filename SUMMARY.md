@@ -19,7 +19,6 @@
     * [机器分批](/机器分批/README.md)
     * [基础信息管理](/TODO)
     * [作业配置和使用](/TODO)
-    * [定时任务](/TODO)
     * [流水线使用](/TODO)
     * [kubectl](/TODO)
     * [terraform](/TODO)
@@ -29,7 +28,8 @@
     * [连接器](/连接器/README.md)
     * [管理员全局设置](/TODO)
     * [启动任务](/TODO)
-* [维护](维护/README.md)
-* [开发](开发/README.md)
 
+* [维护](维护/README.md)
+
+* [开发](开发/README.md)
     * [连接器对接](/连接器对接/README.md)
