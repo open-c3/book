@@ -25,7 +25,7 @@
     * [报警通知](/报警通知/README.md)
     * [查看变量](/查看变量/README.md)
     * [kubectl](/kubectl/README.md)
-    * [terraform](/TODO)
+    * [terraform](/terraform/README.md)
     * [kubestar](/kubestar/README.md)
     * [票据](/TODO) 
     * [收藏夹](/TODO)
