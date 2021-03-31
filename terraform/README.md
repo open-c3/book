@@ -132,6 +132,18 @@ variable "sgs" {
 
 和apply几乎一样，把脚本参数换成destory即可。destroy用户销毁资源 。
 
+# 票据
+
+下面以aws为例说明怎么管理票据，aws通过下面两个环境变量来控制访问的key。
+```
+export AWS_ACCESS_KEY_ID="XXXX"
+export AWS_SECRET_ACCESS_KEY="XXXX"
+```
+每一行的内容格式必须为： /^export\s+[A-Za-z0-9_]+="[A-Za-z0-9\/]+"\s*$/ 否则系统会提示错误。
+
+ ![terraform-ticket](/terraform/images/terraform-ticket.png)
+
+ 如果确定使用票据的方式，在前面配置作业的过程中，除了config步骤，其他操作terraform 的步骤选择上票据。
 
 # 维护注意
 
