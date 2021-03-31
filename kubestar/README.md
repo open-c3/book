@@ -78,3 +78,13 @@ kubestarclt需要的参数是脚本和票据内容的总和，系统实现过程
 如票据中定义了org，如果脚本中也定义了org，那么以脚本中为主。
 
 只要保证脚本中和票据中的参数加起来没有遗漏，系统就可以获取到全的参数进行调用。
+
+# 维护注意
+
+需要手动维护openc3容器或者集群中有terraform命令 （待优化成自动）
+```
+wget https://github.com/open-c3/open-c3-install-cache/job-buildin/kubestarctl -O /bin/kubestarctl
+chmod +x /bin/kubestarctl
+```
+
+注：如果https://github.com/open-c3没开放，wget可能下载不到文件

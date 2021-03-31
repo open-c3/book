@@ -131,3 +131,14 @@ variable "sgs" {
  ### destroy
 
 和apply几乎一样，把脚本参数换成destory即可。destroy用户销毁资源 。
+
+
+# 维护注意
+
+需要手动维护openc3容器或者集群中有terraform命令 （待优化成自动）
+```
+wget https://github.com/open-c3/open-c3-install-cache/job-buildin/terraform -O /bin/terraform
+chmod +x /bin/terraform
+```
+
+注：如果https://github.com/open-c3没开放，wget可能下载不到文件

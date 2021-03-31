@@ -64,3 +64,13 @@ spec:
 票据： 选择上第一步创建的票据
 
 脚本参数：check deployment namespace desiredImage
+
+# 维护注意
+
+需要手动维护openc3容器或者集群中有terraform命令 （待优化成自动）
+```
+wget https://github.com/open-c3/open-c3-install-cache/job-buildin/kubectl -O /bin/kubectl
+chmod +x /bin/kubectl
+```
+
+注：如果https://github.com/open-c3没开放，wget可能下载不到文件
