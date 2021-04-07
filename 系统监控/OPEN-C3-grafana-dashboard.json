@@ -17,7 +17,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 3,
-  "iteration": 1617706911900,
+  "iteration": 1617762024912,
   "links": [],
   "panels": [
     {
@@ -136,10 +136,105 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "hiddenSeries": false,
+      "id": 74,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "openc3_monitor_usetime{job=\"$cluster\"}",
+          "interval": "",
+          "legendFormat": "监控耗时.[{{host}}]",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "监控耗时",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 6
+        "y": 13
       },
       "hiddenSeries": false,
       "id": 22,
@@ -264,7 +359,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 6
+        "y": 13
       },
       "hiddenSeries": false,
       "id": 24,
@@ -389,7 +484,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 6
+        "y": 13
       },
       "hiddenSeries": false,
       "id": 26,
@@ -514,7 +609,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 14
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 20,
@@ -639,7 +734,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 18,
@@ -764,7 +859,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 23
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 38,
@@ -865,7 +960,7 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 23
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 42,
@@ -960,7 +1055,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 23
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 66,
@@ -1055,7 +1150,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 23
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 40,
@@ -1156,7 +1251,7 @@
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 30
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 50,
@@ -1251,7 +1346,7 @@
         "h": 7,
         "w": 6,
         "x": 6,
-        "y": 30
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 54,
@@ -1370,7 +1465,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 30
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 68,
@@ -1471,7 +1566,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 30
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 52,
@@ -1566,7 +1661,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 37
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 44,
@@ -1661,7 +1756,7 @@
         "h": 6,
         "w": 6,
         "x": 6,
-        "y": 37
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 48,
@@ -1780,7 +1875,7 @@
         "h": 6,
         "w": 6,
         "x": 12,
-        "y": 37
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 70,
@@ -1881,7 +1976,7 @@
         "h": 6,
         "w": 6,
         "x": 18,
-        "y": 37
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 46,
@@ -1976,7 +2071,7 @@
         "h": 6,
         "w": 8,
         "x": 0,
-        "y": 43
+        "y": 50
       },
       "hiddenSeries": false,
       "id": 56,
@@ -2077,7 +2172,7 @@
         "h": 6,
         "w": 8,
         "x": 8,
-        "y": 43
+        "y": 50
       },
       "hiddenSeries": false,
       "id": 58,
@@ -2178,7 +2273,7 @@
         "h": 6,
         "w": 8,
         "x": 16,
-        "y": 43
+        "y": 50
       },
       "hiddenSeries": false,
       "id": 60,
@@ -2273,7 +2368,7 @@
         "h": 8,
         "w": 6,
         "x": 0,
-        "y": 49
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 12,
@@ -2392,7 +2487,7 @@
         "h": 8,
         "w": 6,
         "x": 6,
-        "y": 49
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 14,
@@ -2517,7 +2612,7 @@
         "h": 8,
         "w": 6,
         "x": 12,
-        "y": 49
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 10,
@@ -2630,7 +2725,7 @@
         "h": 8,
         "w": 6,
         "x": 18,
-        "y": 49
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 8,
@@ -2761,7 +2856,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 57
+        "y": 64
       },
       "hiddenSeries": false,
       "id": 2,
@@ -2881,7 +2976,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 57
+        "y": 64
       },
       "hiddenSeries": false,
       "id": 6,
@@ -3000,7 +3095,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 65
+        "y": 72
       },
       "hiddenSeries": false,
       "id": 62,
@@ -3107,7 +3202,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 65
+        "y": 72
       },
       "hiddenSeries": false,
       "id": 64,
@@ -3202,7 +3297,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 72
+        "y": 79
       },
       "hiddenSeries": false,
       "id": 28,
@@ -3315,7 +3410,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 72
+        "y": 79
       },
       "hiddenSeries": false,
       "id": 30,
@@ -3428,7 +3523,7 @@
         "h": 7,
         "w": 8,
         "x": 0,
-        "y": 79
+        "y": 86
       },
       "hiddenSeries": false,
       "id": 32,
@@ -3541,7 +3636,7 @@
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 79
+        "y": 86
       },
       "hiddenSeries": false,
       "id": 34,
@@ -3654,7 +3749,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 79
+        "y": 86
       },
       "hiddenSeries": false,
       "id": 36,
@@ -3748,18 +3843,6 @@
         "align": false,
         "alignLevel": null
       }
-    },
-    {
-      "datasource": null,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 86
-      },
-      "id": 4,
-      "title": "Row title",
-      "type": "row"
     }
   ],
   "refresh": "1d",
@@ -3772,8 +3855,8 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "openc3",
-          "value": "openc3"
+          "text": "openc3-orionstar",
+          "value": "openc3-orionstar"
         },
         "error": null,
         "hide": 0,
@@ -3823,5 +3906,5 @@
   "timezone": "",
   "title": "OPEN-C3",
   "uid": "bLsPQtlMz",
-  "version": 92
+  "version": 106
 }
