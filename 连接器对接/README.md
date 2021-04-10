@@ -403,4 +403,7 @@ usermesgenv:
 把http://console.jy.com改成提供连接器接口的地址
 在页面上重新保存不会影响多出来的参数。
 
+关于登出接口，如果有ssologoutapi，会使用该接口进行api调用进行登出，
+如果没有ssologoutapi而是配置了ssologoutaddr，会通过重定向到ssologoutaddr进行登出。
+如果ssologoutapi和ssologoutaddr都没有系统会报错。
 ```
