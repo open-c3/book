@@ -348,3 +348,59 @@ approver： 审批人
 返回{ stat: true, data: { status: $status, reason: 'null' } } 
 其中$status 为审批单据的状态，状态可以为agree（同意）、refuse（拒绝）、unconfirmed（未审批）
 ```
+
+
+# 其他
+
+```
+连接器使用的HTTP Header进行验证的部分，在前端页面上不是每一个都可以进行配置，
+如果前端上没有进行显示，可以直接修改配置文件/data/open-c3/Connector/config.inix。
+
+可以参考下面配置：
+
+cookiekey: sid
+pmspoint: http://console.jy.com/api/keystone/platform/permission
+pmspointenv:
+  appkey: kkk
+  appname: ad
+
+ssocallback: http://console.jy.com/account/login?from=openc3&redirect=http://openc3.org/api/connector/connectorx/setcookie?c3redirect=
+ssochpasswd: http://console.jy.com/setting/personalGroup/myprofile
+ssologoutaddr: http://console.jy.com/account/login?from=openc3logout&redirect=http://openc3.org/api/connector/connectorx/setcookie?c3redirect=http://openc3.org
+ssousername: http://console.jy.com/api/keystone/platform/user?cookie=
+ssousernameenv:
+  appkey: kkk
+  appname: ad
+
+usertree: http://console.jy.com/api/keystone/platform/servicetree
+usertreeenv:
+  appkey: kkk
+  appname: ad
+
+nodeinfo: http://console.jy.com/api/platform/c3/serviceTree/node/
+nodeinfoenv:
+  appkey: kkk
+  appname: ad
+
+treemap:  http://console.jy.com/api/keystone/platform/allservicetree
+treemapenv:
+  appkey: kkk
+  appname: ad
+
+usermail: http://api.connector.open-c3.org/default/mail
+usermailenv:
+  appkey: c3random
+  appname: jobx
+
+usermesg: http://api.connector.open-c3.org/default/mesg
+usermesgenv:
+  appkey: c3random
+  appname: jobx
+
+上面配置中使用到了http://openc3.org/api/connector/connectorx/setcookie接口进行cookie的单独处理。
+
+把http://openc3.org改成本服务的地址
+把http://console.jy.com改成提供连接器接口的地址
+在页面上重新保存不会影响多出来的参数。
+
+```
