@@ -44,5 +44,12 @@ http {
 
     include /etc/nginx/conf.d/*.conf;
 }
+```
 
+# 单机版中第一次拉取新git仓库代码出错
+```
+把容器中mydan的版本更新到最新，新的/data/Software/mydan/dan/tools/git中
+会处理StrictHostKeyChecking=no。
+
+集群版的没有这个问题。
 ```
