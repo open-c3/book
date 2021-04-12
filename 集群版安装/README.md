@@ -268,6 +268,19 @@ EOF
 ### 绑定域名访问
 
 ```
+在上一步骤“部署应用”中，可以通过添加环境变量来进行域名绑定，只需要第一次部署的时候添加即可。
+也可以随时在发布的时候通过这个变量来切换域名。
+```
+命令如：
+```
+C3_DOMAIN=myopenc3.myopenc3.org /data/open-c3/Installer/scripts/cluster.sh deploy  --envname bar --version 20210316
+
+# myopenc3.myopenc3.org 即想绑定的域名
+```
+
+添加环境变量C3_DOMAIN逻辑上多出来下面的文件配置操作
+
+```
 cd /etc/nginx/conf.d && cp open-c3.conf open-c3.pri.conf
 cat open-c3.pri.conf 
 server {
