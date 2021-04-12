@@ -53,3 +53,9 @@ http {
 
 集群版的没有这个问题。
 ```
+
+# 服务任务分配异常
+
+集群机器时间不同步，运行下面命令启动时间同步服务。
+
+/data/Software/mydan/dan/tools/ntpsync -d 
