@@ -38,3 +38,10 @@ harbor_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/x
 --dockerfile :【可缺省】dockerfile的路径，如果不指定，默认为代码构建包根目录中的Dockerfile文件。
 --registry   :【可缺省】同时注册多个id
 ```
+
+注： 需要通过下面命令在OPENC3系统或者镜像中安装aws命令，awsecr_push_image.pl才能正常使用。
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
