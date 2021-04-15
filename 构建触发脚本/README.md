@@ -37,6 +37,8 @@ harbor_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/x
 --repository : 要上传的仓库项目地址，上传的版本为构建出的代码版本，比如git中的tag。
 --dockerfile :【可缺省】dockerfile的路径，如果不指定，默认为代码构建包根目录中的Dockerfile文件。
 --registry   :【可缺省】同时注册多个id
+
+默认会上传两个镜像： image:$tag 和 image:latest
 ```
 
 注： 需要通过下面命令在OPENC3系统或者镜像中安装aws命令，awsecr_push_image.pl才能正常使用。

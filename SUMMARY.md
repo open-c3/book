@@ -27,6 +27,7 @@
     * [kubectl](/kubectl/README.md)
     * [terraform](/terraform/README.md)
     * [kubestar](/kubestar/README.md)
+    * [awsecs](/awsecs/README.md)
     * [票据](/票据/README.md)
     * [收藏夹](/TODO)
     * [审批](/TODO)
