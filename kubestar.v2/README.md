@@ -6,7 +6,7 @@
 
 票据内容示例如下：
 ```
-kubestar-addr: cc.polymericcloud.com
+kubestar-addr: https://cc.polymericcloud.com
 access-key: kdAFXKXAjIJ16HZc
 secret-key: 0Y2rBiVSGm3eLQMXgZeO0qcn3gNKrYOA
 org: "krn::organization::e34f2cf4-6c15-4de9-9286-d018c3f8c612"
@@ -25,6 +25,8 @@ kubestar控制台的web地址。
 ## org
 在kubestar用户列表中可以看到org信息。
 ![kubestar-org](/kubestar/images/kubestar-org.png)
+
+【注：注意获取的是organization的而不是user的，正确格式如krn::organization::XXX】
 
 # 配置作业流程
 
