@@ -193,3 +193,9 @@ connector 连接器
 | 标题  | 内容 | 解释 |
 | ----  |---- | ---- |
 | EDIT CONNECTOR CONFIG | _ | 修改连接器配置 |
+
+sendfile 文件发送
+
+| 标题  | 内容 | 解释 |
+| ----  |---- | ---- |
+| UNLINK FILE | TREEID:$id SUDO:$sudo PATH:$host/$path | 删除线上机器文件 |
