@@ -199,3 +199,12 @@ sendfile 文件发送
 | 标题  | 内容 | 解释 |
 | ----  |---- | ---- |
 | UNLINK FILE | TREEID:$id SUDO:$sudo PATH:$host/$path | 删除线上机器文件 |
+
+
+smallapplication 轻应用
+
+| 标题  | 内容 | 解释 |
+| ----  |---- | ---- |
+| CREATE SMALLAPPLICATION | NAME:$name | 创建轻应用 |
+| EDIT SMALLAPPLICATION | NAME:$name | 编辑轻应用 |
+| DELETE SMALLAPPLICATION | NAME:$name | 删除轻应用 |
