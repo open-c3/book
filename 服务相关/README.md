@@ -59,3 +59,23 @@ http {
 集群机器时间不同步，运行下面命令启动时间同步服务。
 
 /data/Software/mydan/dan/tools/ntpsync -d 
+
+# 时区不正确
+
+通过mysql命令查看时间：select curtime(); 如果时区不正确需要通过下面方式进行调整。
+
+第一种方法：
+这种方法，不需要重启mysql，但是重启mysql时需要重新设置
+```
+> set global time_zone = '+8:00';  ##修改mysql全局时区为北京时间
+> set time_zone = '+8:00';  ##修改当前会话时区
+> flush privileges;  #立即生效
+```
+
+第二种方法：这种方式需要重启mysql
+```
+# vim /etc/my.cnf  ##在[mysqld]区域中加上
+default-time_zone = '+8:00'
+
+# /etc/init.d/mysqld restart  ##重启mysql使新时区生效
+```
