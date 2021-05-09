@@ -43,6 +43,7 @@
 * [维护](维护/README.md)
     * [维护升级](/维护升级/README.md)
     * [系统监控](/系统监控/README.md)
+    * [版本升级](/版本升级/README.md)
 
 * [开发](开发/README.md)
     * [连接器对接](/连接器对接/README.md)
