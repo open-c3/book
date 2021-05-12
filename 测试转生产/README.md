@@ -20,6 +20,8 @@ cd /data/Software/mydan/etc/agent/auth && \
 ssh-keygen -f c3_abc -P "" && \
 mv c3_abc c3_abc.key && \
 echo success
+
+ln -fsn /data/Software/mydan/etc/agent/auth/c3_abc.pub  /data/Software/mydan/AGENT/scripts/c3_abc.pub
 ```
 
 重启openc3服务。
