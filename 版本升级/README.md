@@ -44,11 +44,10 @@ open-c3根据git中的branch进行管理版本，C3版本包含三个数字。
 ./Installer/upgrade/v2.0.0/clean.sh
 ```
 
-# v1.0.0 -> v.2.1.0
+# v2.0.0 -> v.2.1.0
 
 影响代理的继承功能
 ```
-agent 中的表openc3_agent_inherit 一下字段修改
-inheritid` int(16) unsigned comment '继承id
-inheritid` VARCHAR(100) comment '继承id'
+use agent;
+ALTER TABLE openc3_agent_inherit  MODIFY COLUMN inheritid VARCHAR(100) COMMENT 'inheritid';
 ```
