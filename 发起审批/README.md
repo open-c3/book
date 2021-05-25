@@ -16,6 +16,17 @@
 
 审批人会查看到对应内容
 
+审批内容可以使用变量，引入形式为${变量名}
+内部变量：
+version            版本号
+_rollbackVersion_  回滚版本，发布线上时，如果选择了回滚版本，会有此变量
+ip                 发布目标机器ip
+_jobtype_          发布类型，值为test或online
+jobname            作业名
+flowname           流水线名称
+treename           服务树节点全称
+taginfo            版本改动详情：commit hash, commit message,  committer列表
+
 ## 审批人
 
 多个审批人用“,”（英文逗号）分割
