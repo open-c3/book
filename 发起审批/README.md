@@ -12,10 +12,10 @@
 
 默认生成，也可以进行修改，在执行历史中可以进行查找。
 
-## 审批内容
+## 审批内容(可使用变量)
 
 审批人会查看到对应内容
-
+```
 审批内容可以使用变量，引入形式为${变量名}
 内部变量：
 version            版本号
@@ -26,6 +26,19 @@ jobname            作业名
 flowname           流水线名称
 treename           服务树节点全称
 taginfo            版本改动详情：commit hash, commit message,  committer列表
+```
+
+例:
+审批内容可以写成如下:
+```
+发布审批
+作业名: ${jobname};
+流水线名: ${flowname};
+发布版本信息: ${taginfo};
+服务树名: ${treename};
+版本: ${version};
+回滚版本: ${_rollbackVersion_};
+```
 
 ## 审批人
 
