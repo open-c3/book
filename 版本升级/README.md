@@ -50,4 +50,7 @@ open-c3根据git中的branch进行管理版本，C3版本包含三个数字。
 ```
 use agent;
 ALTER TABLE openc3_agent_inherit  MODIFY COLUMN inheritid VARCHAR(100) COMMENT 'inheritid';
+
+#2021年 05月 25日 星期二 19:50:44 CST
+ALTER TABLE openc3_agent_inherit  ADD `fullname` VARCHAR(300) comment 'fullname';
 ```
