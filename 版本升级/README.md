@@ -53,6 +53,7 @@ ALTER TABLE openc3_agent_inherit  MODIFY COLUMN inheritid VARCHAR(100) COMMENT '
 
 #2021年 05月 25日 星期二 19:50:44 CST
 ALTER TABLE openc3_agent_inherit  ADD `fullname` VARCHAR(300) comment 'fullname';
+alter table openc3_agent_inherit modify `fullname` varchar(300) DEFAULT NULL COMMENT 'fullname' AFTER inheritid;
 
 #2021年 05月 27日 星期四 15:07:40 CST
 use connector;
