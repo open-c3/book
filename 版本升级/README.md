@@ -53,4 +53,16 @@ ALTER TABLE openc3_agent_inherit  MODIFY COLUMN inheritid VARCHAR(100) COMMENT '
 
 #2021年 05月 25日 星期二 19:50:44 CST
 ALTER TABLE openc3_agent_inherit  ADD `fullname` VARCHAR(300) comment 'fullname';
+
+#2021年 05月 27日 星期四 15:07:40 CST
+use connector;
+create table `openc3_connector_useraddr`(
+`id`            int(16) unsigned not null primary key auto_increment comment 'id',
+`user` VARCHAR(100) comment 'user',
+`email` VARCHAR(100) comment 'email',
+`phone` VARCHAR(100) comment 'phone',
+`edit_time` TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP comment 'time',
+`edit_user` VARCHAR(100) comment 'edit_user',
+UNIQUE KEY `uniq_user` (`user`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 comment='useraddr';
 ```
