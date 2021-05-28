@@ -46,7 +46,10 @@ open-c3根据git中的branch进行管理版本，C3版本包含三个数字。
 
 # v2.0.0 -> v.2.1.0
 
-影响代理的继承功能
+* > 影响代理的继承功能
+* > 服务树名称内部缓存
+* > 支持用户地址簿管理
+
 ```
 use agent;
 ALTER TABLE openc3_agent_inherit  MODIFY COLUMN inheritid VARCHAR(100) COMMENT 'inheritid';
@@ -66,4 +69,23 @@ create table `openc3_connector_useraddr`(
 `edit_user` VARCHAR(100) comment 'edit_user',
 UNIQUE KEY `uniq_user` (`user`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 comment='useraddr';
+```
+
+
+# v2.1.0 -> v.2.1.1
+
+* > 支持private服务树节点
+```
+use connector;
+
+create table `openc3_connector_private`(
+`id`            int(16) unsigned not null primary key auto_increment comment 'id',
+`user` VARCHAR(100) comment 'user',
+`edit_time` TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP comment 'time',
+`edit_user` VARCHAR(100) comment 'edit_user',
+UNIQUE KEY `uniq_user` (`user`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 comment='private';
+
+insert into openc3_connector_private(id,user)values('4000000001','open-c3');
+delete from openc3_connector_private;
 ```
