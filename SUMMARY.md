@@ -47,6 +47,8 @@
     * [轻应用](/轻应用/README.md)
     * [作业变量](/作业变量/README.md)
     * [私有节点管理](/私有节点管理/README.md)
+    * [管理员](/管理员/README.md)
+
 
 * [维护](维护/README.md)
     * [维护升级](/维护升级/README.md)
