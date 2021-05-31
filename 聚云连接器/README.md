@@ -6,6 +6,12 @@
 
 ![聚云第三方应用管理](/聚云连接器/images/聚云第三方应用管理.png)
 
+## 添加依赖模块
+
+聚云用的是https协议，默认没有安装https的模块，运行以下命令进行安装xs
+```
+/data/Software/mydan/perl/bin/cpan install LWP::Protocol::https
+```
 ## 修改连接器配置
 
 把 /data/open-c3/Connector/config.ini/juyun 文件中的 xxxxxx 更换成上一步在聚云中创建的appkey
