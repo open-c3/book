@@ -1,3 +1,23 @@
+# 简介
+
+kubectl 插件支持原生的kubectl命令，需要两个部分。
+
+先在票据管理中配置好kubeconfig，在作业步骤中选择上票据后在脚本参数中写上kubectl命令的参数。
+
+其中kubectl可能需要文件，如apply -f app.yaml，文件来源可以有如下两种
+```
+情况1: 文件来源于代码仓库
+
+如果是在流水线中使用的kubectl插件，kubectl运行的当前目录下有构建当前版本的文件，可以直接使用。
+如代码中有abc.yaml 文件，可以直接apply -f abc.yaml来使用文件。
+
+情况二：文件来源于当前步骤的配置
+
+可以把需要的文件内容写到脚本内容中，然后可以通过关键字CONFIGFILE来指定，如：apply -f CONFIGFILE
+
+注：本文后半部分有例子。
+```
+
 # 票据管理
 
 在个人票据中管理自己的票据。票据类型选择作业内建插件。
@@ -7,18 +27,19 @@
 ![票据管理](/kubectl/images/管理票据.png)
 
 
-# 配置作业流程
+# 步骤配置例子
 
-在流水线、作业、快速脚本中的用法都一致，如下。
+## 镜像更新
 
-## apply (应用)
+脚本参数：set image deployment/nginx c3test-nginx=nginx:$version -n c3test
 
-发布应用，是一次发布的操作。
-![kubectl-apply](/kubectl/images/kubectl-apply.png)
+## 发布检查
 
-使用内建插件，点击选择kubectl类型。
+脚本参数：check c3test deployment/nginx c3test-nginx=nginx:$version
 
-脚本内容：
+注：check是open-c3扩展的参数。
+
+## 应用发布
 
 ```
 #!kubectl
@@ -41,29 +62,13 @@ spec:
         - containerPort: 5000
 ```
 
-脚本中用到了关键字DEPLOYVERSION, 系统调用过程中会用脚本参数中的第二个参数替换DEPLOYVERSION。
+脚本中用到了关键字${VERSION}, 系统调用过程如果存在构建版本$version,会用$version变量的内容替换${VERSION}。
 
-票据： 选择上第一步创建的票据
+脚本参数：apply -f CONFIGFILE -n c3test
 
-脚本参数： apply $version
+## 引用代码仓库中的文件
 
-在做CI/CD过程中$version就是代码仓库中打的tag。
-
-## check （检查发布状态）
-
-检查应用的发布状态。
-![kubectl-check](/kubectl/images/kubectl-check.png)
-
-使用内建插件，点击选择kubectl类型。
-
-脚本为如下固定内容：
-```
-#!kubectl
-```
-
-票据： 选择上第一步创建的票据
-
-脚本参数：check deployment namespace desiredImage
+脚本参数：apply -f pod-app.yaml -n c3test
 
 # 维护注意
 
