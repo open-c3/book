@@ -32,6 +32,7 @@
         * [kubestar(不推荐)](/kubestar/README.md)
         * [awsecs](/awsecs/README.md)
         * [sendemail](/sendemail/README.md)
+        * [sendmesg](/sendmesg/README.md)
     * [票据](/票据/README.md)
     * [收藏夹](/TODO)
     * [审批](/TODO)
