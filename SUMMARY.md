@@ -25,6 +25,7 @@
     * [机器管理](/机器管理/README.md)
     * [报警通知](/报警通知/README.md)
     * [查看变量](/查看变量/README.md)
+    * [核心功能](/核心功能/README.md)
     * [内建插件](/内建插件/README.md)
         * [kubectl](/kubectl/README.md)
         * [terraform](/terraform/README.md)
