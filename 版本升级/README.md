@@ -91,3 +91,11 @@ UNIQUE KEY `uniq_user` (`user`)
 insert into openc3_connector_private(id,user)values('4000000001','open-c3');
 delete from openc3_connector_private;
 ```
+
+```
+wget http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-1.noarch.rpm && rpm -ivh wandisco-git-release-7-1.noarch.rpm
+yum install git -y
+git --version
+ 
+git version 2.31.1
+```
