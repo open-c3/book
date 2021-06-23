@@ -15,7 +15,6 @@
     * [定时任务](/定时任务/README.md)
     * [分组作业](/分组作业/README.md)
     * [流水线](/流水线/README.md)
-    * [轻应用](/轻应用/README.md)
     * [报告](/报告/README.md)
 
 * [进阶功能](/进阶功能/README.md)
@@ -25,6 +24,7 @@
     * [资源编排](/资源编排/README.md)
     * [演示广场](/演示广场/README.md)
     * [私人节点](/私人节点/README.md)
+    * [轻应用](/轻应用/README.md)
 
 * [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
