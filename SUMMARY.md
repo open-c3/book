@@ -17,6 +17,14 @@
     * [轻应用](/轻应用/README.md)
     * [报告](/报告/README.md)
 
+* [进阶功能](/进阶功能/README.md)
+    * [容器发布](/容器发布/README.md)
+    * [主机和容器混合发布](/主机和容器混合发布/README.md)
+    * [应用群同时发布](/应用群同时发布/README.md)
+    * [资源编排](/资源编排/README.md)
+    * [演示广场](/演示广场/README.md)
+    * [私人节点](/私人节点/README.md)
+
 * [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
     * [发起审批](/发起审批/README.md)
@@ -70,7 +78,6 @@
     * [连接器对接](/连接器对接/README.md)
     * [前端开发环境准备](/前端开发环境准备/README.md)
     * [一键部署k8s单机版](/一键部署k8s单机版/README.md)
-
 
 * [FAQ](FAQ/README.md)
     * [服务相关](/服务相关/README.md)
