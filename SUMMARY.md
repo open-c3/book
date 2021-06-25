@@ -20,11 +20,11 @@
 * [进阶功能](/进阶功能/README.md)
     * [容器发布](/容器发布/README.md)
     * [主机和容器混合发布](/主机和容器混合发布/README.md)
-    * [应用群同时发布](/应用群同时发布/README.md)
     * [资源编排](/资源编排/README.md)
+    * [轻应用](/轻应用/README.md)
+    * [应用群同时发布](/应用群同时发布/README.md)
     * [演示广场](/演示广场/README.md)
     * [私人节点](/私人节点/README.md)
-    * [轻应用](/轻应用/README.md)
 
 * [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
