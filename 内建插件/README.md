@@ -9,6 +9,7 @@
 * [awsecs](/awsecs/README.md) ： 用于发布aws中ecs服务。
 * [sendemail](/sendemail/README.md) ：用于发邮件。
 * [sendmesg](/sendmesg/README.md) ： 用于发消息，根据连接器配置而定，可能是短信或者im消息。
+* [flowcaller](/flowcaller/README.md) ： 用于调用流水线进行流水线发布。
 
 #说明
 
