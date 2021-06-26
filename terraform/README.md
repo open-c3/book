@@ -1,4 +1,8 @@
-## 配置文件
+# 简介
+
+OPEN-C3提供了内建插件用于调用terraform，通过这个插件可以做[资源编排](/资源编排/README.md)。
+
+# 配置文件
 config文件配置
 
 ![terraform-config](/terraform/images/terraform-config.png)
