@@ -29,7 +29,6 @@
 * [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
     * [发起审批](/发起审批/README.md)
-    * [作业管理](/作业管理/README.md)
     * [机器分批](/机器分批/README.md)
     * [账户管理](/账户管理/README.md)
     * [文件管理](/文件管理/README.md)
