@@ -47,7 +47,7 @@
         * [sendmesg](/sendmesg/README.md)
         * [flowcaller](/flowcaller/README.md)
     * [票据](/票据/README.md)
-    * [收藏夹](/TODO)
+    * [收藏夹](/收藏夹/README.md)
     * [连接器](/连接器/README.md)
     * [构建触发脚本](/构建触发脚本/README.md)
     * [流水线三种代码来源](/流水线三种代码来源/README.md)
