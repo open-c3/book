@@ -71,6 +71,12 @@
         * [地址簿管理](/地址簿管理/README.md)
         * [私有节点管理](/私有节点管理/README.md)
 
+* [设计理念](设计理念/README.md)
+    * [关于连接器](/关于连接器/README.md)
+    * [关于持续运营](/关于持续运营/README.md)
+    * [关于AGENT特性](/关于AGENT特性/README.md)
+    * [关于内建插件](/关于内建插件/README.md)
+
 * [维护](维护/README.md)
     * [维护升级](/维护升级/README.md)
     * [系统监控](/系统监控/README.md)
