@@ -1,6 +1,6 @@
 # OPEN-C3 集群版安装
 
-集群模式可以根据实际情况进行灵活的调整。以下以四台服务器部署方式为例，集群名为：bar。
+集群模式可以根据实际情况进行灵活的调整。以下用四台服务器部署方式为例，集群名为：bar。
 
 * > 四台机器ip分别为 10.10.10.1，10.10.10.2，10.10.10.3，10.10.10.4。
 
@@ -9,8 +9,8 @@
 其中10.10.10.4这台机器用于部署mysql数据库服务，如果有高可用的数据库可以省去这台机器，
 直接把数据库配置的部分改成数据库真实的地址。
 
-OPEN-C3配置涉及到5个模块，如果不用OPEN-C3自动创建的数据库服务，
-请在模块目录下找到schema.sql文件来对数据库进行初始化。
+OPEN-C3集群配置涉及到5个模块，如果不用OPEN-C3自动创建的数据库服务，
+请在每个模块目录下找到schema.sql文件用来对数据库表机构进行初始化。
 ```
 
 ## 准备运行环境
@@ -106,7 +106,7 @@ EOF
 
 ```
 
-注： 该配置中有一个 c3-database的配置，如果不需要部署脚本部署数据库服务并初始化，需要去掉这个配置。
+注： 该配置中有一个 c3-database的配置，如果不需要部署脚本自动部署数据库服务并初始化，不要添加该配置。
 
 ### 修改JOBX配置文件
 
@@ -246,18 +246,18 @@ EOF
 
 ## 初始化数据库
 
-### 通过程序部署的数据库容器实例
+### 通过脚本安装数据库
 ```
-1. 在job配置文件中添加c3-database字段，如上JOB的配置。
+1. 在job配置文件中添加c3-database字段，如上述JOB的配置。
 2. 执行初始化：/data/open-c3/Installer/cluster/deploy/c3-database.pl -e bar
 3. 在部署数据库的机器上执行：/data/Software/mydan/Installer/cluster/init.sh
-4. 在初始化一次：/data/open-c3/Installer/cluster/deploy/c3-database.pl -e bar
+4. 再初始化一次：/data/open-c3/Installer/cluster/deploy/c3-database.pl -e bar
 
 ```
 
 ### 使用已有数据库实例
 
-通过下面文件各种对数据库进行初始化
+通过下面文件各自对数据库进行初始化
 ```
 /data/open-c3/AGENT/schema.sql
 /data/open-c3/CI/schema.sql
@@ -277,7 +277,7 @@ EOF
 ### 直接访问
 通过 http://10.10.10.1:88 http://10.10.10.2:88 http://10.10.10.3:88 访问集群
 
-注： 可以申请个域名执行这三个地址
+注： 可以申请一个域名指向这三个地址。
 
 ### 绑定域名访问
 
@@ -292,7 +292,7 @@ C3_DOMAIN=myopenc3.myopenc3.org /data/open-c3/Installer/scripts/cluster.sh deplo
 # myopenc3.myopenc3.org 即想绑定的域名
 ```
 
-添加环境变量C3_DOMAIN逻辑上多出来下面的文件配置操作
+添加环境变量C3_DOMAIN逻辑上做了以下配置文件的修改操作
 
 ```
 cd /etc/nginx/conf.d && cp open-c3.conf open-c3.pri.conf
@@ -329,4 +329,4 @@ server {
 ### 首页
 ![刚安装完的首页](/单机版安装/images/刚安装完的首页.png)
 
-登录成功后跳转到如图首页
+登录成功后跳转到如图首页。

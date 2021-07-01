@@ -90,13 +90,13 @@ variable "sgs" {
 脚本参数： config
 
 ```
-注： 每个terraform作业在系统中都会有一个独立的目录存放config文件。没错config可以编辑一个文件。
-如可以添加一个config步骤，脚本参数中写 config lb.tf 。
+注： 每个terraform作业在系统中都会有一个独立的目录存放config文件。每个config可以编辑一个文件。
+可以添加多个config步骤，如脚本参数中写 config lb.tf 。
 则在目录中会有一个lb.tf文件。当脚本参数为config时候，其实是config main.tf。
 ```
 
 ## 操作动作
-有四个操作动作：init plan apply destory
+有四个操作动作：init、plan、apply、destory
  
 四个动作可以在一个步骤中执行，执行过程中按照脚本参数的顺序进行调用。
 
@@ -113,7 +113,7 @@ variable "sgs" {
 票据： 空
 脚本参数： init plan
 ```
-这里是把init和plan两个动作在这里按照顺序执行，执行后可以在日志中看出如果执行后续的apply的资源变化。
+这里是把init和plan两个动作在这里按照顺序执行，执行后可以在日志中看出如果真实执行apply的资源变化情况。
 正常应该在plan之后添加一步审批操作，审批后执行下一步的apply。
 ```
 
@@ -138,7 +138,7 @@ variable "sgs" {
 
 # 票据
 
-下面以aws为例说明怎么管理票据，aws通过下面两个环境变量来控制访问的key。
+下面以AWS为例说明怎么管理票据，AWS通过下面两个环境变量来控制访问的key。
 ```
 export AWS_ACCESS_KEY_ID="XXXX"
 export AWS_SECRET_ACCESS_KEY="XXXX"
@@ -151,10 +151,8 @@ export AWS_SECRET_ACCESS_KEY="XXXX"
 
 # 维护注意
 
-需要手动维护openc3容器或者集群中有terraform命令 （待优化成自动）
+需要手动维护OPEN-C3服务所在机器的terraform命令【单机版更新的是容器中的terraform】。
 ```
 wget https://github.com/open-c3/open-c3-install-cache/job-buildin/terraform -O /bin/terraform
 chmod +x /bin/terraform
 ```
-
-注：如果https://github.com/open-c3没开放，wget可能下载不到文件

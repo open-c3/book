@@ -4,7 +4,7 @@ OPEN-C3可以用作[容器发布](/容器发布/README.md)，如果服务是托�
 
 # 管理票据
 
-在个人票据中管理自己的票据。票据类型选择作业内建插件。
+在“个人票据”中管理自己的票据。票据类型选择作业内建插件。
 
 ![票据](/kubestar/images/票据.png)
 
@@ -23,7 +23,7 @@ kubestar控制台的web地址。
 ![kubestar-addr](/kubestar/images/kubestar-addr.png)
 
 ## access-key 和 secret-key
-进到kubestar用户列表页面，编辑个人信息中可以看到AK/SK。
+进到kubestar用户列表页面，“编辑个人信息”中可以看到AK/SK。
 ![kubestar-key](/kubestar/images/kubestar-key.png)
 
 ## org
@@ -78,10 +78,12 @@ apply $version
 # 注
 
 kubestarclt需要的参数是脚本和票据内容的总和，系统实现过程中使用了覆盖的方式。
+
 脚本中的内容会覆盖票据中的内容。
+
 如票据中定义了org，如果脚本中也定义了org，那么以脚本中为主。
 
-只要保证脚本中和票据中的参数加起来没有遗漏，系统就可以获取到全的参数进行调用。
+只要保证脚本中和票据中的参数加起来没有遗漏，系统就可以获取到全的参数进行正确调用。
 
 # 维护注意
 

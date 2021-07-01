@@ -1,10 +1,10 @@
 # 介绍
 
-awsecs为作业内建插件，用于发布aws的ecs服务。使用方式如下
+awsecs作业内建插件用于发布AWS的ECS服务。
 
 # 票据
 
-在流水线使用过程中需要用[awsecr_push_image.pl](/构建触发脚本/README.md)把构建的包build成镜像上传到aws的ecr服务中，它们使用的是同一个票据。请参考脚本的票据。
+在流水线使用过程中CI部分需要用[awsecr_push_image.pl](/构建触发脚本/README.md)把构建的包build成镜像上传到AWS的ECR服务中。
 
 # 配置作业流程
 

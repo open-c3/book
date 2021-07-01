@@ -1,6 +1,6 @@
 # 简介
 
-OPEN-C3通过内建插件的方式支持容器发布。目前支持发布kubernetes和awsecs服务。
+OPEN-C3通过[内建插件](/内建插件/README.md)的方式支持容器发布。目前支持发布kubernetes和AWS ECS服务。
 
 # 使用
 
@@ -20,10 +20,10 @@ OPEN-C3通过内建插件的方式支持容器发布。目前支持发布kuberne
 * > 学习OPEN-C3[作业任务](/作业任务/README.md)的用法。
 * > 学习OPEN-C3内建插件[kubestar.v2](/kubestar.v2/README.md)的用法。
 
-## awsecs发布
+## AWS ECS发布
 
-使用awsecs发布的三个步骤：
+使用AWS ECS发布的三个步骤：
 
-* > 学习[awsecs](https://aws.amazon.com/cn/ecs)的用法。
+* > 学习[AWS ECS](https://aws.amazon.com/cn/ecs)的用法。
 * > 学习OPEN-C3[作业任务](/作业任务/README.md)的用法。
-* > 学习OPEN-C3内建插件[awsecs](/awsecs/README.md)的用法。
+* > 学习OPEN-C3内建插件[AWS ECS](/awsecs/README.md)的用法。
