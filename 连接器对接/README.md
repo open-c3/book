@@ -1,3 +1,7 @@
+# 简介
+
+如果需要进行连接器对接，需要按照这个文档实现OPEN-C3定义的接口。
+
 # 登录
 
 ## 获取用户信息
@@ -29,10 +33,10 @@ http://api.connector.open-c3.org/internal/user/username?cookie=
 ```
 stat： true # 查询正常，固定内容。如果系统故障可以返回false
 data: 返回查询的内容
-data.admin # 0 或 1， 1时表示该用户为管理员，open-c3会通过这个控制前端的显示，有些页面只有管理员可见。
-data.showconnector # 0 或 1， open-c3通过这个来控制前端是否显示连接器页面。1为显示。
-data.company # 表示公司的名称，为一个字符串。用来控制镜像和密钥共享（密钥和镜像可以选择共享给公司内部）。
-data.user # 用户名称，这里最好返回用户的邮箱。
+data.admin # 0 或 1， 1时表示该用户为管理员，OPEN-C3会通过这个控制前端的显示，有些页面只有管理员可见。
+data.showconnector # 0 或 1， OPEN-C3通过这个来控制前端是否显示连接器页面。1为显示。
+data.company # 表示公司的名称，为一个字符串。用来控制镜像和密钥共享（密钥和镜像可以选择共享给组织内部）。
+data.user # 用户名称，这里最好返回的是用户的邮箱。
 ```
 
 ## 用户登出
@@ -57,15 +61,15 @@ http://api.connector.open-c3.org/default/user/logout?sid=
 
 说明:
 ```
-当检查到用户没有登录时，要跳转的页面，有如下两种格式
+该地址为当检查到用户没有登录时要跳转的页面，有如下两种格式
 
 格式一：/#/login?callback=
 
 格式二：http://sso.mydomain.org/login?callback=
 
-(格式一不是以http开通，系统会默认带上openc3当前的域名)
+(格式一不是以http开通，系统会默认带上OPEN-C3当前的域名。)
 
-跳转过程中会把访问openc3的地址带在后面，如:
+跳转过程中会把访问OPEN-C3的地址带在后面，如:
 
 http://sso.mydomain.org/login?callback=http://www.open-c3.org/#/connector/config/123
 
@@ -73,10 +77,9 @@ http://sso.mydomain.org/login?callback=http://www.open-c3.org/#/connector/config
 
 ## cookie名
 
-平台用到的cookie的名称。
+平台用的cookie名称。
 
 ![连接器-cookie名](/连接器对接/images/连接器对接-cookie名.png)
-
 
 # 服务树
 
@@ -127,7 +130,7 @@ http://api.connector.open-c3.org/default/tree
 
 说明：
 ```
-通过appname、appkey查询公司的全量服务树。配置演例：
+通过appname、appkey查询平台的全量服务树。配置示例：
 http://api.connector.open-c3.org/default/tree/map
 ```
 
@@ -175,7 +178,6 @@ http://api.connector.open-c3.org/default/node/api/
 查询过程中会在末尾添加查询的服务树节点号。
 ```
 
-
 调用示例：
 ```
 [root@openc3-srv-docker /]# curl -H 'appname: jobx' -H 'appkey: 14318225215653259055111884215373' http://api.connector.open-c3.org/default/node/api/0 
@@ -215,17 +217,15 @@ http://api.connector.open-c3.org/default/node/api/
 ## 权限控制
 
 ```
-权限点分两种类型，一种是和服务树相关，一种是服务树无关。
+权限点分两种类型，一种是和服务树相关，另一种是服务树无关。
 
 服务树接口示例：
 http://api.connector.open-c3.org/default/auth/point
-
 
 服务树无关:
 http://api.connector.open-c3.org/default/auth/point?point=$point&cookie=$cookie
 
 服务树相关:
-
 http://api.connector.open-c3.org/default/auth/point?point=$point&treeid=$treeid&cookie=$cookie
 
 ```
@@ -291,9 +291,9 @@ data: 是否有权限，1为有权限，0为无权限
 
 # 消息出口
 
-消息出口需要appname和appkey完成验证（即添加http的Header）。
-## 邮件
+消息出口需要appname和appkey完成验证【添加http的Header】。
 
+## 邮件
 ```
 配置的地址示例:
 http://api.connector.open-c3.org/default/mail
@@ -328,12 +328,13 @@ mesg: 短信内容
 用于辅助审批，如有OA系统，可以进行OA审批对接。
 
 可以缺省，缺省情况下说明无外部审批功能。
+
 ## 审批接口
 
 ```
 审批接口示例： http://api.connector.open-c3.org/connectorx/approval
 
-需要实现两个调用，GET和POST，POST用与提交审批，GET用于查询审批状态。
+需要实现两个调用，GET和POST，POST用于提交审批，GET用于查询审批状态。
 
 方法：POST
 参数
@@ -399,8 +400,8 @@ usermesgenv:
 
 上面配置中使用到了http://openc3.org/api/connector/connectorx/setcookie接口进行cookie的单独处理。
 
-把http://openc3.org改成本服务的地址
-把http://console.jy.com改成提供连接器接口的地址
+把http://openc3.org改成本服务的地址。
+把http://console.jy.com改成提供连接器接口的地址。
 在页面上重新保存不会影响多出来的参数。
 
 关于登出接口，如果有ssologoutapi，会使用该接口进行api调用进行登出，

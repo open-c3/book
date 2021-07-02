@@ -11,18 +11,17 @@
 
 如果地址中包含 “git@” 或者 ‘.git’ 被认为是git代码。
 
-git的票据可以使用SSH Key类型
-
+git的票据可以使用SSH Key类型。
 
 ## openc3fileserver
 
-如果地址是“openc3://*”，表示使用的是，openc3本服务树节点的数据文件。
+如果地址是“openc3://*”，表示使用的是，OPEN-C3本服务树节点的数据文件。
 
 此处不需要票据。
 
 文件可以通过前端页面上传，也可以通过命令行上传。
 
-文件格式： tar.gz ,但是上传的时候建议不要保留后缀，比如把文件命名为 release-001
+文件格式： tar.gz ,但是上传的时候建议不要保留后缀，比如可以把文件命名为：release-001。
 
 例，把/tmp/foo 目录打包成版本release-001进行上传：
 ```
@@ -30,7 +29,7 @@ cd /tmp/foo
 tar -zcvf release-001 *
 ```
 
-打完包后上传到业务管理中的文件管理处，可以通过页面上传，也可以通过命令上传
+打完包后上传到业务管理中的[文件管理](/文件管理/README.md)处，可以通过页面上传，也可以通过命令上传。
 
 ## svn
 
@@ -42,12 +41,12 @@ tar -zcvf release-001 *
 
 ## 需要管理配置文件
 
-可以配置一个openc3fileserver方式的地址作为依赖，然后把配置文件放到openc3的文件管理中。
-
-比如业务代码中没有dockerfile文件，运维配置过程中可以把dockerfile文件放在文件管理中。
+可以配置一个openc3fileserver方式的地址作为依赖，然后把配置文件放到OPEN-C3的文件管理中。
+README.md
+比如业务代码中没有dockerfile文件，运维配置过程中可以把dockerfile文件放在[文件管理](/文件管理/README.md)中。
 
 ## 构建代码工作已经在它处完成
 
-这样就可以不需要把编译好的代码从新放到git或者svn中打tag来触发openc3系统。
+这样就可以不需要把编译好的代码从新放到git或者svn中打tag来触发OPEN-C3系统。
 
-可以配置成openc3fileserver的方式，让构建完成的代码直接上传到openc3中等待发布。
+可以配置成openc3fileserver的方式，让构建完成的代码直接上传到OPEN-C3中等待发布。

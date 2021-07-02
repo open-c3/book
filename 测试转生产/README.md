@@ -4,13 +4,11 @@
 
 涉及到3个部分的信息：
 
-1. 数据库 ： 可以进行同步
-2. 构建包和存储 ： 备份同步数据即可
-3. 安装在线上集群上的agent的key。 下面详细讲一下key的解决方案
+1. 数据库 ： 可以进行同步。
+2. 构建包和存储 ： 备份同步数据即可。
+3. 安装在线上机器中AGENT的key。 下面详细讲一下key的解决方案。
 
-
-下面以以后线上集群的名称abc为例：
-
+下面以如果转生产后集群名称是abc为例：
 
 在容器中执行如下命令【把abc改成以后集群的名称】： 
 ```
@@ -24,4 +22,4 @@ echo success
 ln -fsn /data/Software/mydan/etc/agent/auth/c3_abc.pub  /data/Software/mydan/AGENT/scripts/c3_abc.pub
 ```
 
-重启openc3服务。
+重启OPEN-C3服务。

@@ -11,14 +11,14 @@
 
 ## 集群版
 
-预发布环境和上面单机版升级方式一样。升级好预发布环境，在该环境上对集群进行升级。
+先升级预发布环境，预发布环境和单机版升级方式一样。升级好预发布环境，在预发布环境上对集群进行升级。
 
 运行下面命令进行升级:
 
 ```
 /data/open-c3/Installer/scripts/upgrade.sh clustername 
 ```
-其中clustarname就是要升级的集群名称
+其中clustarname就是要升级的集群名称。
 
 
 # 回滚方法
@@ -34,10 +34,10 @@ SYNOPSIS
 
  ```
 
---envname : 集群名称
---version : 要发布或者回滚的名称
---rollback: 该参数存在说明是要回滚
---hostname: 只操作集群中的某个机器
+* > --envname : 集群名称。
+* > --version : 要发布或者回滚的版本。
+* > --rollback: 该参数存在说明是要回滚。
+* > --hostname: 只操作集群中的某个机器。
 
 # 升级单个模块
 
@@ -58,7 +58,7 @@ SYNOPSIS
 -rwxr-xr-x. 1 root root 1928 1月  11 10:49 MYDan.pl
 -rwxr-xr-x. 1 root root 1949 1月  11 10:49 web-shell.pl
 
-# 单个模块的操作方式，参数和上述一致
+# 单个模块的操作方式，参数和上面的例子一致。
 [root@localhost deploy]# ./CI.pl 
 SYNOPSIS
      $0 --evnname txy 
@@ -66,6 +66,6 @@ SYNOPSIS
      $0 --evnname txy --version 001 --rollback
      $0 --evnname txy --version 001 --hostname 'foo'
 
-[root@localhost deploy]# 
+[root@localhost deploy]#
 
 ```

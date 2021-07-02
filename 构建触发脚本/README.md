@@ -25,8 +25,8 @@ harbor_push_image.pl --repository reg.harbordemo.com/c3test/app1 --dockerfile  f
 ## awsecr_push_image.pl
 
 ```
-用于构建docker镜像，同时上传到aws ecr中，使用过程中需要选择票据，
-票据类型为“作业内建插件”，即aws 命令行使用的aws config。
+用于构建docker镜像，同时上传到AWS ECR中，使用过程中需要选择票据，
+票据类型为“作业内建插件”，内容为AWS命令行使用的AWS config。
 
 格式如下：
 [default]
@@ -40,12 +40,12 @@ harbor_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/x
 参数： 
 --repository : 要上传的仓库项目地址，上传的版本为构建出的代码版本，比如git中的tag。
 --dockerfile :【可缺省】dockerfile的路径，如果不指定，默认为代码构建包根目录中的Dockerfile文件。
---registry   :【可缺省】同时注册多个id
+--registry   :【可缺省】支持同时注册多个id
 
-默认会上传两个镜像： image:$tag 和 image:latest
+默认会上传两个镜像：image:$tag 和 image:latest
 ```
 
-注： 需要通过下面命令在OPENC3系统或者镜像中安装aws命令，awsecr_push_image.pl才能正常使用。
+注： 需要通过下面命令在OPEN-C3系统或者镜像中安装AWS命令，awsecr_push_image.pl才能正常使用。
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
