@@ -10,6 +10,7 @@
 * [sendemail](/sendemail/README.md) ：用于发送邮件。
 * [sendmesg](/sendmesg/README.md) ： 用于发送消息，根据连接器配置而定，可能是短信也可能是im消息。
 * [flowcaller](/flowcaller/README.md) ： 用于调用流水线进行应用群发布。
+* [cdnrefresh](/cdnrefresh/README.md) ： 对各CDN厂商的CDN进行刷新。
 
 #说明
 

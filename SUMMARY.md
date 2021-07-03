@@ -25,6 +25,7 @@
     * [应用群同时发布](/应用群同时发布/README.md)
     * [演示广场](/演示广场/README.md)
     * [私人节点](/私人节点/README.md)
+    * [CDN刷新](/CDN刷新/README.md)
 
 * [使用手册](/使用手册/README.md)
     * [AGENT安装和管理](/AGENT安装和管理/README.md)
@@ -46,6 +47,7 @@
         * [sendemail](/sendemail/README.md)
         * [sendmesg](/sendmesg/README.md)
         * [flowcaller](/flowcaller/README.md)
+        * [cdnrefresh](/cdnrefresh/README.md)
     * [票据](/票据/README.md)
     * [收藏夹](/收藏夹/README.md)
     * [连接器](/连接器/README.md)
