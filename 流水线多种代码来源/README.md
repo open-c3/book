@@ -1,11 +1,11 @@
 
 # 介绍
 
-在通过流水线进行CI/CD配置时，代码地址和代码依赖可以使用本文描述的三种代码来源。
+在通过流水线进行CI/CD配置时，代码地址和代码依赖可以使用本文描述的多种代码来源。
 
-![代码地址填写处](/流水线三种代码来源/images/代码地址.png)
+![代码地址填写处](/流水线多种代码来源/images/代码地址.png)
 
-# 三种代码来源
+# 多种代码来源
 
 ## git
 
@@ -30,6 +30,22 @@ tar -zcvf release-001 *
 ```
 
 打完包后上传到业务管理中的[文件管理](/文件管理/README.md)处，可以通过页面上传，也可以通过命令上传。
+
+## harbor
+
+如果地址是“/tags”结尾，说明是harbor的镜像地址。
+
+例：
+```
+http://harbor-china.openc3.com/api/repositories/linkfoo/linkfoo-api/tags
+https://registry.hub.docker.com/v1/repositories/nginx/tags
+```
+
+接口返回样式：
+![harbor](/流水线多种代码来源/images/harbor.png)
+
+该链接可以在harbor页面中查看,需要有name字段,如存在下图中的“detail=1”等参数需要去掉：
+![harbortag](/流水线多种代码来源/images/harbortag.png)
 
 ## svn
 
