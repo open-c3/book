@@ -47,9 +47,13 @@ https://registry.hub.docker.com/v1/repositories/nginx/tags
 该链接可以在harbor页面中查看,需要有name字段,如存在下图中的“detail=1”等参数需要去掉：
 ![harbortag](/流水线多种代码来源/images/harbortag.png)
 
+票据使用“用户名密码”方式，就是harbor登录的用户名密码。
+
+拉取镜像后会自动生成一个Dockerfile文件，可以直接用[构建触发脚本](/构建触发脚本/README.md)直接上传到其他仓库。
+
 ## svn
 
-如果不匹配上面两个方式，就被任务是svn代码。
+如果不匹配上面描述的方式，就被认为是svn代码。
 
 票据使用“用户名密码”方式。
 
