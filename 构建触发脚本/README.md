@@ -35,7 +35,7 @@ aws_secret_access_key = XXX
 ```
 ```
 使用格式如下：
-harbor_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/xxx  --dockerfile Dockerfile --registry 706909001001,720909001001
+awsecr_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/xxx  --dockerfile Dockerfile --registry 706909001001,720909001001
 
 参数： 
 --repository : 要上传的仓库项目地址，上传的版本为构建出的代码版本，比如git中的tag。
