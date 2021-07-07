@@ -51,6 +51,34 @@ https://registry.hub.docker.com/v1/repositories/nginx/tags
 
 拉取镜像后会自动生成一个Dockerfile文件，可以直接用[构建触发脚本](/构建触发脚本/README.md)直接上传到其他仓库。
 
+## 阿里云镜像仓库
+
+如果地址是以“aliyuncr://”开头，说明是阿里云镜像仓库地址。
+例：
+```
+aliyuncr://registry.cn-hangzhou.aliyuncs.com/foo/foo-core
+```
+
+注：
+```
+使用这个功能需要如下操作：
+1.安装阿里云linux客户端工具
+wget https://aliyuncli.alicdn.com/aliyun-cli-linux-latest-amd64.tgz
+tar -xf aliyun-cli-linux-latest-amd64.tgz
+cp aliyun /usr/local/bin
+2.使用RAM进行子账号权限管理
+创建RAM子账号，并对该子账号授权，记录账号的AccessKey ID等信息
+权限名称: AliyunContainerRegistryFullAccess,AliyunContainerRegistryReadOnlyAccess
+3.配置客户端工具
+aliyun configure
+
+一个OPEN-C3系统目前只支持一个阿里云账号，并且配置到机器中。
+```
+
+票据使用“用户名密码”方式，就是docker登录的用户名密码。
+
+拉取镜像后会自动生成一个Dockerfile文件，可以直接用[构建触发脚本](/构建触发脚本/README.md)直接上传到其他仓库。
+
 ## svn
 
 如果不匹配上面描述的方式，就被认为是svn代码。
