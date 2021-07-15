@@ -7,20 +7,15 @@
 * CPU: 4核
 * 内存: 8G
 
-## 下载代码
+## 一键安装
 
 ```
-[root@open-c3]#mkdir -p /data
-[root@open-c3]#cd /data
-[root@open-c3]#git clone https://github.com/open-c3/open-c3
-```
-注：服务启动后数据会存放在/data/open-c3-data目录下【包括数据库数据，日志等】
 
-## 安装
+curl https://raw.githubusercontent.com/open-c3/open-c3/v2.1.1/Installer/scripts/single.sh| bash -s install 10.10.10.10
+#(机器的ip地址,如果需要通过公网访问，请填写公网ip)
 
-```
-[root@open-c3]#./open-c3.sh  install 10.10.10.10 #(机器的ip地址,如果需要通过公网访问，请填写公网ip)
-
+#访问不了github的用户可以使用下面命令进行安装【以gitee作为数据源】：
+#curl https://gitee.com/open-c3/open-c3/raw/v2.1.1/Installer/scripts/single.sh| OPENC3_ZONE=CN bash -s install 10.10.10.10
 ....
 
 [SUCC]openc-c3 installed successfully.
@@ -29,12 +24,14 @@ Web page: http://10.10.10.10
 User: open-c3
 Password: changeme
 [INFO]Run command to start service: ./open-c3.sh start
+
 ```
+注：程序安装后会产生两个目录，/data/open-c3用于存放代码，/data/open-c3-data用于存放数据【包括数据库数据，日志等】。
 
 ## 启动服务
 
 ```
-[root@open-c3]# ./open-c3.sh start
+[root@open-c3]# /data/open-c3/open-c3.sh  start
 
 ....
 
