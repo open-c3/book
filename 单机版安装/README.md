@@ -23,24 +23,16 @@ curl https://raw.githubusercontent.com/open-c3/open-c3/v2.1.1/Installer/scripts/
 Web page: http://10.10.10.10
 User: open-c3
 Password: changeme
-[INFO]Run command to start service: ./open-c3.sh start
+[INFO]Run command to start service: /data/open-c3/open-c3.sh start
 
-```
-注：程序安装后会产生两个目录，/data/open-c3用于存放代码，/data/open-c3-data用于存放数据【包括数据库数据，日志等】。
-
-## 启动服务
-
-```
-[root@open-c3]# /data/open-c3/open-c3.sh  start
-
-....
+...
 
 Creating openc3-mysql ... done
 Creating c3_openc3-server_1 ... done
 [SUCC]started.
 
-
 ```
+注：程序安装后会产生两个目录，/data/open-c3用于存放代码，/data/open-c3-data用于存放数据【包括数据库数据，日志等】。
 
 ## 通过浏览器访问服务
 
