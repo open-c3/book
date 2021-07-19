@@ -2,10 +2,12 @@
 
 * [介绍](README.md)
 
-* [安装](安装/README.md)
+* [安装](/安装/README.md)
     * [体验版](/体验版安装/README.md)
     * [单机版](/单机版安装/README.md)
     * [集群版](/集群版安装/README.md)
+
+* [社区](/社区/README.md)
 
 * [核心功能](/核心功能/README.md)
     * [快速执行脚本](/快速执行脚本/README.md)

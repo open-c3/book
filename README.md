@@ -10,6 +10,10 @@
 <source id="mp4" src="/video/OPEN-C3体验版演示.mp4" type="video/mp4">
 </video>
 
+# 社区
+
+点击查看[社区](/社区/README.md)情况，点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。
+
 # 特点
 
 * 高效的文件传输协议，在面对服务器数量庞大的情况下效果明显。
