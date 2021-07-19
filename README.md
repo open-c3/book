@@ -13,6 +13,7 @@
 # 社区
 
 点击查看[社区](/社区/README.md)情况，点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。
+点击查看[聊天室历史](http://open-c3.cmcloud.org/irclog/index.php)。
 
 # 特点
 
