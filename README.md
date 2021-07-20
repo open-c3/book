@@ -1,3 +1,7 @@
+<center>
+点击进入-><a href="https://webchat.freenode.net/?channels=#open-c3">聊天室</a>
+</center>
+
 # 介绍
 
 在整个的运维环节中，对产品的持续构建（CI）持续部署（CD）伴随着产品的整个生命周期。
