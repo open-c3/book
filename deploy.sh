@@ -9,7 +9,7 @@ rm -rf open-c3.github.io/*
 rsync -a _book/ open-c3.github.io/
 
 cd open-c3.github.io 
-git reset 16580961eec5d26fc9ce61694da4ff2a1ae2f2ec
+git reset c40c88e77a8048a2efdae70dedcf6e302acdda26
 
 git add *
 git commit -m 'Automatic deployment'
