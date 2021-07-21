@@ -213,3 +213,10 @@ smallapplication 轻应用
 | CREATE SMALLAPPLICATION | NAME:$name | 创建轻应用 |
 | EDIT SMALLAPPLICATION | NAME:$name | 编辑轻应用 |
 | DELETE SMALLAPPLICATION | NAME:$name | 删除轻应用 |
+
+useraddr 地址簿
+
+| 标题  | 内容 | 解释 |
+| ----  |---- | ---- |
+| CREATE USERADDR | USER:$user EMAIL:$email PHONE:$phone | 添加地址簿 |
+| DELETE USERADDR | USER:$user EMAIL:$email PHONE:$phone | 删除地址簿 |
