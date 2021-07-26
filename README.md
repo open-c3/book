@@ -9,7 +9,7 @@
 
 可以把OPEN-C3当作CI/CD平台来使用。安装部署后便可以独立使用。根据文档中的描述可以方便的完成[体验版](/体验版安装/README.md)、[单机版](/单机版安装/README.md)和[集群版](/集群版安装/README.md)的安装。同时可以根据实际情况，给OPEN-C3提供指定接口后，可以在不修改任何OPEN-C3代码的情况下对接公司的登录系统、服务树、权限系统、OA审批。
 
-可以简单看一下OPEN-C3的[设计理念](/设计理念/README.md)。安装一个[体验版](/体验版安装/README.md)试试吧。
+可以简单看一下OPEN-C3的[设计理念](/设计理念/README.md)。安装一个[体验版](/体验版安装/README.md)试试吧。点击查看更多[视频教程](/视频教程/README.md)。
 <video id="video" controls="" preload="none" type="video/mp4" width="100%" >
 <source id="mp4" src="/video/OPEN-C3体验版演示.mp4" type="video/mp4">
 </video>
