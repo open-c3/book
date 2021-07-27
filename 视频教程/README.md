@@ -15,3 +15,7 @@ docker run -p 8080:88 openc3/allinone:latest
 <video id="video" controls="" preload="none" type="video/mp4" width="100%" >
 <source id="mp4" src="/video/OPEN-C3对接聚云立方.mp4" type="video/mp4">
 </video>
+
+# 更多视频
+
+点击进入[简书](https://www.jianshu.com/nb/45844901)查看。
