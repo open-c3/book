@@ -45,7 +45,7 @@ awsecr_push_image.pl --repository 706039051001.dkr.ecr.us-east-1.amazonaws.com/x
 默认会上传两个镜像：image:$tag 和 image:latest
 ```
 
-注： 需要通过下面命令在OPEN-C3系统或者镜像中安装AWS命令，awsecr_push_image.pl才能正常使用。
+注： 需要通过下面命令在OPEN-C3系统或者镜像中安装AWS命令，awsecr_push_image.pl才能正常使用。【只有集群版需要】
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
