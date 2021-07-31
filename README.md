@@ -1,6 +1,6 @@
-<center>
+<!-- <center>
 点击进入-><a href="https://webchat.freenode.net/?channels=#open-c3">聊天室</a>
-</center>
+</center> -->
 
 # 介绍
 
@@ -16,8 +16,11 @@
 
 # 社区
 
-点击查看[社区](/社区/README.md)情况，点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。
-点击查看[聊天历史](http://open-c3.cmcloud.org/irclog/index.php)。
+点击查看[社区](/社区/README.md)情况，可以扫描二维码添加open-c3微信。
+
+![微信二维码](/社区/images/open-c3-微信二维码.jpeg)
+<!-- 点击查看[社区](/社区/README.md)情况，点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。
+点击查看[聊天历史](http://open-c3.cmcloud.org/irclog/index.php)。 -->
 
 # 特点
 
