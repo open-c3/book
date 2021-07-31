@@ -11,11 +11,11 @@
 
 ```
 
-curl https://raw.githubusercontent.com/open-c3/open-c3/v2.1.1/Installer/scripts/single.sh| bash -s install 10.10.10.10
+curl https://raw.githubusercontent.com/open-c3/open-c3/v2.2.0/Installer/scripts/single.sh| bash -s install 10.10.10.10
 #(机器的ip地址,如果需要通过公网访问，请填写公网ip)
 
 #访问不了github的用户可以使用下面命令进行安装【以gitee作为数据源】：
-#curl https://gitee.com/open-c3/open-c3/raw/v2.1.1/Installer/scripts/single.sh| OPENC3_ZONE=CN bash -s install 10.10.10.10
+#curl https://gitee.com/open-c3/open-c3/raw/v2.2.0/Installer/scripts/single.sh| OPENC3_ZONE=CN bash -s install 10.10.10.10
 ....
 
 [SUCC]openc-c3 installed successfully.

@@ -21,7 +21,7 @@
 
 可以根据需要开发，如需要添加新的内建插件，请提交插件到如下地址：
 
-https://github.com/open-c3/open-c3/tree/v2.1.1/JOB/buildin/  # 其中v2.1.1 是您使用的OPEN-C3版本。
+https://github.com/open-c3/open-c3/tree/v2.2.0/JOB/buildin/  # 其中v2.2.0 是您使用的OPEN-C3版本。
 ```
 
 #开发
