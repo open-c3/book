@@ -100,3 +100,47 @@ git --version
  
 git version 2.31.1
 ```
+
+```
+mysql从5.5升级到5.7,mysql字段变化如下:
+https://github.com/open-c3/open-c3/commit/415a199408ea302d785f27447cfa69c244e395a9
+
+=====================================================================
+单机版升级步骤如下：
+
+I.先执行一次普通升级：【升级后服务正常】
+/data/open-c3/Installer/scripts/upgrade.sh
+
+II.检查一下mysql的备份文件：/data/open-c3-data/backup/mysql
+
+III.可以做一次备份： /data/open-c3/Installer/scripts/datactrl.sh backup
+
+IV.把/data/open-c3/Installer/C3/docker-compose.yml  中的mysql:5.5 改成mysql:5.6
+V.执行升级命令 ： /data/open-c3/open-c3.sh reborn
+
+VI.把/data/open-c3/Installer/C3/docker-compose.yml  中的mysql:5.6 改成mysql:5.7
+VII.执行升级命令 ： /data/open-c3/open-c3.sh reborn
+
+注： 如果升级过程中失败，多升级几次。在liehu环境中从5.6升到5.7得时候服务没启动失败，多试几次后成功了。
+
+尝试备份数据库： 报错
+VIII.[root@localhost scripts]# /data/open-c3/Installer/scripts/databasectrl.sh backup
+[INFO]backup to 20210731.182746 ...
+mysqldump: [Warning] Using a password on the command line interface can be insecure.
+mysqldump: Couldn't execute 'SHOW VARIABLES LIKE 'gtid\_mode'': Table 'performance_schema.session_variables' doesn't exist (1146)
+[SUCC]backup done.
+
+处理办法：
+1.到数据库容器中执行升级
+mysql_upgrade -u root -p123 --force
+2.重启数据库
+docker restart openc3-mysql
+3.重启服务
+/data/open-c3/open-c3.sh restart
+4.备份数据库
+/data/open-c3/Installer/scripts/databasectrl.sh backup
+
+=====================================================================
+集群版可以不做数据库版本升级,升级过程中不影响数据库。
+
+```
