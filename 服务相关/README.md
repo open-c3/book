@@ -83,3 +83,21 @@ default-time_zone = '+8:00'
 OPEN-C3服务端需要安装最新的mydan才能进行构建机器的私钥分离。否则会引起权限问题，
 
 让不应该有权限的人访问到其他人的构建机。
+
+# 运行环境：centos8+docker20+ 安装报错
+
+运行环境：centos8+docker20+
+
+错误描述：
+
+在服务器安装docker后生成容器时出现出如下错误
+
+runc: symbol lookup error: runc: undefined symbol: seccomp_api_get
+
+错误原因：
+
+这是缺少头文件或者相关的库之类的问题，是缺少了依赖包，于是安装依赖包
+
+解决办法：
+
+yum install libseccomp-devel
