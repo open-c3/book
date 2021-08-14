@@ -12,12 +12,17 @@ OPEN-C3是一个开源的CI/CD/CO系统，已经在多个企业中使用。
 
 需要讨论的部分请添加下面微信进行讨论。
 
+## 讨论区
+
+### 微信
+
 ![微信二维码](/社区/images/open-c3-微信二维码.jpeg)
 
-<!-- ## 聊天室
+### irc 聊天室
 
-* 点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。
-* 点击查看[聊天历史](http://open-c3.cmcloud.org/irclog/index.php)。 -->
+<!-- * 点击进入[聊天室](https://webchat.freenode.net/?channels=#open-c3)。 -->
+* 点击进入[聊天室](https://web.libera.chat/?chan=#open-c3)。
+* 点击查看[聊天历史](http://open-c3.cmcloud.org/irclog/index.php)。
 
 ## 作者列表
 
