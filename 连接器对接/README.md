@@ -408,3 +408,14 @@ usermesgenv:
 如果没有ssologoutapi而是配置了ssologoutaddr，会通过重定向到ssologoutaddr进行登出。
 如果ssologoutapi和ssologoutaddr都没有系统会报错。
 ```
+
+## 资源释放
+
+连接器中的服务树被外部系统接管后，服务树节点的删除要询问OPEN-C3系统该节点是否可以删除，从而保证系统一致。
+
+询问方法:
+```
+http://open-c3.my.domain/api/connector/release?id=服务树节点id
+接口会返回两种情况，都为字符串，分别为： true 、 false 【其中true表示服务树可以释放可以删除，false表示不能删除】
+
+```
