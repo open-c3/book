@@ -3,7 +3,7 @@ set -e
 
 rm -rf open-c3.github.io
 gitbook build
-git clone https://github.com/open-c3/open-c3.github.io
+git clone git@github.com:open-c3/open-c3.github.io.git
 
 rm -rf open-c3.github.io/*
 rsync -a _book/ open-c3.github.io/
