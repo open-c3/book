@@ -278,47 +278,10 @@ EOF
 ## 通过浏览器访问服务
 
 ### 直接访问
-通过 http://10.10.10.1:88 http://10.10.10.2:88 http://10.10.10.3:88 访问集群
+通过 http://10.10.10.1 http://10.10.10.2 http://10.10.10.3 访问集群
 
 注： 可以申请一个域名指向这三个地址。
 
-### 绑定域名访问
-
-```
-在上一步骤“部署应用”中，可以通过添加环境变量来进行域名绑定，只需要第一次部署的时候添加即可。
-也可以随时在发布的时候通过这个变量来切换域名。
-```
-命令如：
-```
-C3_DOMAIN=myopenc3.myopenc3.org /data/open-c3/Installer/scripts/cluster.sh deploy  --envname bar --version 20210316
-
-# myopenc3.myopenc3.org 即想绑定的域名
-```
-
-添加环境变量C3_DOMAIN逻辑上做了以下配置文件的修改操作
-
-```
-cd /etc/nginx/conf.d && cp open-c3.conf open-c3.pri.conf
-cat open-c3.pri.conf 
-server {
-    listen       80;
-    server_name  myopenc3.myopenc3.org; #这里改成自己的域名
-
-    location / {
-        proxy_pass http://127.0.0.1:88;
-
-        proxy_redirect    off;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header Host $host:$server_port;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-    }
-}
-
-```
 
 ### 使用正式域名访问
 
