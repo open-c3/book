@@ -93,6 +93,7 @@
     * [连接器对接](/连接器对接/README.md)
     * [前端开发环境准备](/前端开发环境准备/README.md)
     * [一键部署k8s单机版](/一键部署k8s单机版/README.md)
+    * [API文档](/API文档/README.md)
 
 * [FAQ](FAQ/README.md)
     * [服务相关](/服务相关/README.md)
