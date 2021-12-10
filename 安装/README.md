@@ -19,3 +19,12 @@ TODO: 后续集群版的目录结构也会和单机版一致。确保三个安�
 ```
 
 ![openc3版本](/安装/images/Open-C3版本路线.drawio.png)
+
+如需切换版本请查看[版本升级手册](/版本升级/README.md)
+
+单机版可以添加如下定时任务，每天凌晨定时检查,需要的情况下会自动更新。
+```
+1 15 * * * /data/open-c3/Installer/scripts/singleAutoUpdate.sh
+
+#升级日志路径: /data/open-c3-data/logs/singleAutoUpdate.log
+```
