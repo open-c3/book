@@ -144,3 +144,62 @@ docker restart openc3-mysql
 集群版可以不做数据库版本升级,升级过程中不影响数据库。
 
 ```
+
+# v2.1.1 -> v2.2.0
+
+```
+#直接更新
+/data/open-c3/open-c3.sh upgrade
+```
+
+# v2.2.0 -> v2.2.1
+
+```
+
+###数据库发布
+
+use ci;
+ALTER TABLE openc3_ci_project ADD `ci_type` VARCHAR(100) DEFAULT 'default' comment 'citype';
+ALTER TABLE openc3_ci_project ADD `ci_type_ticketid` VARCHAR(20) comment 'k8sticketid';
+ALTER TABLE openc3_ci_project ADD `ci_type_kind` VARCHAR(200) comment 'k8s.kind';
+ALTER TABLE openc3_ci_project ADD `ci_type_namespace` VARCHAR(200) comment 'k8snamespace';
+ALTER TABLE openc3_ci_project ADD `ci_type_name` VARCHAR(200) comment 'name';
+ALTER TABLE openc3_ci_project ADD `ci_type_container` VARCHAR(200) comment 'container';
+ALTER TABLE openc3_ci_project ADD `ci_type_repository` VARCHAR(200) comment 'repository';
+ALTER TABLE openc3_ci_project ADD `ci_type_dockerfile` VARCHAR(200) comment 'dockerfile';
+ALTER TABLE openc3_ci_project ADD `ci_type_dockerfile_content` VARCHAR(3000) comment 'dockerfile_content';
+
+alter table openc3_ci_ticket modify `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP; #如果这条报错请忽略,mysql版本不一样
+alter table openc3_ci_ticket modify column `share` VARCHAR(5000);
+
+
+### 数据库回滚
+
+use ci;
+ALTER TABLE openc3_ci_project drop column `ci_type`;
+ALTER TABLE openc3_ci_project drop column `ci_type_ticketid`;
+ALTER TABLE openc3_ci_project drop column `ci_type_kind`;
+ALTER TABLE openc3_ci_project drop column `ci_type_namespace`;
+ALTER TABLE openc3_ci_project drop column `ci_type_name`;
+ALTER TABLE openc3_ci_project drop column `ci_type_container`;
+ALTER TABLE openc3_ci_project drop column `ci_type_repository`;
+ALTER TABLE openc3_ci_project drop column `ci_type_dockerfile`;
+ALTER TABLE openc3_ci_project drop column `ci_type_dockerfile_content`;
+
+alter table openc3_ci_ticket modify column `share` VARCHAR(100);
+
+#安装依赖
+
+/data/open-c3/Installer/scripts/single/v2.2.1.sh 
+
+```
+
+# v2.2.0 -> v2.3.1
+
+```
+#调整数据库
+/data/open-c3/Installer/scripts/single/v2.3.1.sql
+
+#安装依赖
+/data/open-c3/Installer/scripts/single/v2.3.1.sh 
+```
