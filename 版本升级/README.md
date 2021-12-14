@@ -223,6 +223,8 @@ ALTER TABLE openc3_ci_project ADD `ci_type_approver2` VARCHAR(200) comment 'appr
 #切换版本
 /data/open-c3/Installer/scripts/versionctrl.sh list
 /data/open-c3/Installer/scripts/versionctrl.sh switch v2.3.2
+#部署
+/data/open-c3/open-c3.sh upgrade S
 
 ```
 
@@ -242,6 +244,9 @@ ALTER TABLE openc3_ci_project drop column `ci_type_approver2`;
 #切回版本
 /data/open-c3/Installer/scripts/versionctrl.sh list
 /data/open-c3/Installer/scripts/versionctrl.sh switch v2.3.1
+#部署旧版本
+/data/open-c3/open-c3.sh upgrade S
+
 
 ```
 
