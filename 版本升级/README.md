@@ -203,3 +203,45 @@ alter table openc3_ci_ticket modify column `share` VARCHAR(100);
 #安装依赖
 /data/open-c3/Installer/scripts/single/v2.3.1.sh 
 ```
+
+
+# v2.3.1 -> v2.3.2
+
+##升级
+```
+#登录数据库, 如下使用默认账号
+docker exec -it openc3-mysql mysql -uroot -popenc3123456^!
+
+#更新数据库
+
+use ci;
+ALTER TABLE openc3_ci_project ADD `ci_type_open` VARCHAR(20) comment 'open';
+ALTER TABLE openc3_ci_project ADD `ci_type_concurrent` VARCHAR(20) comment 'concurrent';
+ALTER TABLE openc3_ci_project ADD `ci_type_approver1` VARCHAR(200) comment 'approver1';
+ALTER TABLE openc3_ci_project ADD `ci_type_approver2` VARCHAR(200) comment 'approver2';
+
+#切换版本
+/data/open-c3/Installer/scripts/versionctrl.sh list
+/data/open-c3/Installer/scripts/versionctrl.sh switch v2.3.2
+
+```
+
+##回滚
+```
+#登录数据库, 如下使用默认账号
+docker exec -it openc3-mysql mysql -uroot -popenc3123456^!
+
+
+#回滚数据库
+use ci;
+ALTER TABLE openc3_ci_project drop column `ci_type_open`;
+ALTER TABLE openc3_ci_project drop column `ci_type_concurrent`;
+ALTER TABLE openc3_ci_project drop column `ci_type_approver1`;
+ALTER TABLE openc3_ci_project drop column `ci_type_approver2`;
+
+#切回版本
+/data/open-c3/Installer/scripts/versionctrl.sh list
+/data/open-c3/Installer/scripts/versionctrl.sh switch v2.3.1
+
+```
+
