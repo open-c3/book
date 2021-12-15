@@ -204,6 +204,13 @@ alter table openc3_ci_ticket modify column `share` VARCHAR(100);
 /data/open-c3/Installer/scripts/single/v2.3.1.sh 
 ```
 
+# v2.2.1 -> v2.3.1
+
+```
+#直接切换版本,数据库结构一致
+/data/open-c3/Installer/scripts/versionctrl.sh list
+/data/open-c3/Installer/scripts/versionctrl.sh switch v2.3.1
+```
 
 # v2.3.1 -> v2.3.2
 
