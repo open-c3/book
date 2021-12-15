@@ -24,7 +24,7 @@ TODO: 后续集群版的目录结构也会和单机版一致。确保三个安�
 
 单机版可以添加如下定时任务，每天凌晨定时检查,需要的情况下会自动更新。
 ```
-1 15 * * * /data/open-c3/Installer/scripts/singleAutoUpdate.sh
+15 1 * * * /data/open-c3/Installer/scripts/singleAutoUpdate.sh
 
 #升级日志路径: /data/open-c3-data/logs/singleAutoUpdate.log
 ```
