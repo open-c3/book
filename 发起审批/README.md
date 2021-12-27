@@ -29,12 +29,14 @@ jobname            作业名。
 flowname           流水线名称。
 treename           服务树节点全称。
 taginfo            版本改动详情：commit hash,commit message,committer列表。
+submitter          提交人【注: >= v2.3.4 版本可用】
 ```
 
 例:
 审批内容可以写成如下:
 ```
 发布审批
+提交人: ${submitter};
 作业名: ${jobname};
 流水线名: ${flowname};
 发布版本信息: ${taginfo};
