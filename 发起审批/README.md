@@ -29,7 +29,12 @@ jobname            作业名。
 flowname           流水线名称。
 treename           服务树节点全称。
 taginfo            版本改动详情：commit hash,commit message,committer列表。
-submitter          提交人【注: >= v2.3.4 版本可用】
+
+【注: 以下变量>= v2.3.4 版本可用】
+submitter          提交人
+deploy_env         内容同_jobtype_
+rollback_version   内容同_rollbackVersion_
+rollback           如有回滚版本的情况下内容为“如需回滚会回滚到版本: xxx” 否则为空
 ```
 
 例:
@@ -45,6 +50,23 @@ submitter          提交人【注: >= v2.3.4 版本可用】
 回滚版本: ${_rollbackVersion_};
 ```
 
+例2:【>=v2.3.4版本推荐使用以下模版】
+```
+发布审批
+
+提交人：${submitter};
+
+流水线名: ${flowname};
+服务树名称: ${treename};
+
+发布版本: ${version};
+${rollback}
+
+发布环境: ${deploy_env}
+
+发布版本tag信息: ${taginfo}
+
+```
 ## 审批人
 
 多个审批人用“,”（英文逗号）分隔。
