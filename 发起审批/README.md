@@ -35,6 +35,8 @@ submitter          提交人
 deploy_env         内容同_jobtype_
 rollback_version   内容同_rollbackVersion_
 rollback           如有回滚版本的情况下内容为“如需回滚会回滚到版本: xxx” 否则为空
+tagtime            OPENC3发现tag的时间
+tagger             打tag的人
 ```
 
 例:
