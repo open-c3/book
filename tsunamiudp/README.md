@@ -63,7 +63,7 @@ if [ "x$os" == "xLinux" ] ;then
     ulimit -s 10240  || _exit "ulimit -s fail";
 fi
 
-cd /data/open-c3-data/glusterfs/tsunamiudp || _exit "ulimit -n fail";
+cd /data/open-c3-data/glusterfs/tsunamiudp || _exit "chdir fail";
 pwd
 exec /data/tsunami-udp/server/tsunamid 2>&1
 ```
