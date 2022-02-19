@@ -20,6 +20,7 @@
     * [分组作业](/分组作业/README.md)
     * [流水线](/流水线/README.md)
     * [报告](/报告/README.md)
+    * [监控](/监控/README.md)
 
 * [进阶功能](/进阶功能/README.md)
     * [容器发布](/容器发布/README.md)
