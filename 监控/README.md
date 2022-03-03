@@ -34,6 +34,12 @@ summary: "磁盘报警"
 description: "磁盘使用超过85%\n当前主机数据盘使用百分比: {{ $value }}%"
 value: '{{ $value }}%'
 
+alert: 数据盘使用百分比大于85%
+expr: ceil(max((node_filesystem_size_bytes{fstype=~"ext.?|xfs", mountpoint!="/"}-node_filesystem_free_bytes{fstype=~"ext.?|xfs", mountpoint!="/"}) *100/(node_filesystem_avail_bytes {fstype=~"ext.?|xfs", mountpoint!="/"}+(node_filesystem_size_bytes{fstype=~"ext.?|xfs", mountpoint!="/"}-node_filesystem_free_bytes{fstype=~"ext.?|xfs", mountpoint!="/"})))by(instance)) > 85
+summary: "主机磁盘报警"
+description: "磁盘使用超过85%\n当前主机数据盘使用百分比: {{ $value }}%"
+value: '{{ $value }}%'
+
 
 
 ---
