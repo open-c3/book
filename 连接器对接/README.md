@@ -323,6 +323,23 @@ mesg: 短信内容
 
 返回：{ stat： true }
 
+## 语音
+
+```
+配置的地址如下:
+http://api.connector.open-c3.org/default/mesg
+#使用内置是和短信接口一样
+
+调用方式：POST
+
+参数
+user：用户名，接口需要自己查询对应的用户的手机号
+mesg: 语音内容
+```
+
+返回：{ stat： true }
+
+
 # 外部辅助审批
 
 用于辅助审批，如有OA系统，可以进行OA审批对接。
