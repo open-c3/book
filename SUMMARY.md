@@ -55,6 +55,7 @@
         * [cdnrefresh](/cdnrefresh/README.md)
         * [tsunamiudp](/tsunamiudp/README.md)
         * [calltestenv](/calltestenv/README.md)
+        * [localbash](/localbash/README.md)
     * [票据](/票据/README.md)
     * [收藏夹](/收藏夹/README.md)
     * [连接器](/连接器/README.md)
