@@ -11,11 +11,11 @@
 
 ```
 
-curl https://raw.githubusercontent.com/open-c3/open-c3/v2.6.0/Installer/scripts/single.sh | OPENC3VERSION=v2.6.0 bash -s install 10.10.10.10
+curl https://raw.githubusercontent.com/open-c3/open-c3/v2.6.1/Installer/scripts/single.sh | OPENC3VERSION=v2.6.1 bash -s install 10.10.10.10
 #(机器的ip地址,如果需要通过公网访问，请填写公网ip)
 
 #访问不了github的用户可以使用下面命令进行安装【以gitee作为数据源】：
-#curl https://gitee.com/open-c3/open-c3/raw/v2.6.0/Installer/scripts/single.sh | OPENC3VERSION=v2.6.0 OPENC3_ZONE=CN bash -s install 10.10.10.10
+#curl https://gitee.com/open-c3/open-c3/raw/v2.6.1/Installer/scripts/single.sh | OPENC3VERSION=v2.6.1 OPENC3_ZONE=CN bash -s install 10.10.10.10
 ....
 
 [SUCC]openc-c3 installed successfully.
@@ -34,6 +34,13 @@ Creating c3_openc3-server_1 ... done
 ```
 注：程序安装后会产生两个目录，/data/open-c3用于存放代码，/data/open-c3-data用于存放数据【包括数据库数据，日志等】。
 
+## 把服务更新到最新版本,启动遗漏服务
+```
+[root@open-c3 ~]# /data/open-c3/open-c3.sh upgrade  #更新服务
+[root@open-c3 ~]# /data/open-c3/open-c3.sh dup      #更新表结构
+[root@open-c3 ~]# /data/open-c3/open-c3.sh start    #重新启动一次服务
+ 
+```
 ## 通过浏览器访问服务
 
 通过 http://10.10.10.10 访问服务
@@ -47,11 +54,3 @@ Creating c3_openc3-server_1 ... done
 ![刚安装完的首页](/单机版安装/images/刚安装完的首页.png)
 
 登录成功后跳转到如图首页
-
-## 升级
-
-建议安装后查看[维护升级手册](/维护升级/README.md)把服务更新到最新。
-
-```
-为了缩短安装的时间，安装的时候用了部分预先构建的数据，建议安装结束后进行一次升级操作。
-```
