@@ -9,6 +9,7 @@
 
 ## 一键安装
 
+注：一般情况下使用以下安装方式即可，如果有网络问题，请使用[C3安装器](https://github.com/open-c3/open-c3-installer)进行安装。
 ```
 
 curl https://raw.githubusercontent.com/open-c3/open-c3/v2.6.1/Installer/scripts/single.sh | OPENC3VERSION=v2.6.1 bash -s install 10.10.10.10
