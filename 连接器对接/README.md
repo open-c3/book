@@ -233,38 +233,43 @@ http://api.connector.open-c3.org/default/auth/point?point=$point&treeid=$treeid&
 权限点：
 ```
     #级别说明： 0=> 登录用户 1 => 研发 2 => 运维 3 => 管理员
-    my %point =
-        (
-            openc3_job_read => [ 0, 1, 2, 3 ],    # 读取job的信息【服务树相关】
-            openc3_job_write => [ 2, 3 ],         # 修改job的配置【服务树相关】
-            openc3_job_delete => [ 2, 3 ],        # 删除job的配置【服务树相关】
-            openc3_job_vssh => [ 2, 3 ],          # 使用虚拟终端【服务树相关】
-            openc3_job_vsshnobody => [ 1, 2, 3 ], #使用nobody用户的虚拟终端【服务树相关】
-            openc3_job_control => [ 1, 2, 3 ],    # 操作job【服务树相关】
-            openc3_job_root => [ 3 ],             # job管理员【服务树无关】
 
-            openc3_jobx_read => [ 0, 1, 2, 3 ],   # 读取jobx的信息【服务树相关】
-            openc3_jobx_write => [ 2, 3 ],        # 修改jobx的配置 【服务树相关】
-            openc3_jobx_delete => [ 2, 3 ],       # 删除jobx的配置【服务树相关】
-            openc3_jobx_control => [ 2, 3 ],      # 操作jobx【服务树相关】
-            openc3_jobx_root => [ 3 ],            # jobx管理员【服务树无关】
+    # 全局权限点
+    my %pointG = (
+        openc3_job_root          => [          3 ], # job管理员
+        openc3_jobx_root         => [          3 ], # jobx管理员
+        openc3_ci_root           => [          3 ], # ci管理员
+        openc3_agent_root        => [          3 ], # agent管理员
+        openc3_connector_root    => [          3 ], # connector管理员
+    );
 
-            openc3_ci_read => [ 0, 1, 2, 3 ],     # 读取ci的信息【服务树相关】
-            openc3_ci_write => [ 2, 3 ],          # 修改ci的配置【服务树相关】
-            openc3_ci_delete => [ 2, 3 ],         # 删除ci的配置【服务树相关】
-            openc3_ci_control => [ 1, 2, 3 ],     # 操作ci【服务树相关】
-            openc3_ci_root => [ 3 ],              # ci管理员【服务树无关】
+    # 服务树相关权限点
+    my %pointT = (
+        openc3_job_read          => [ 0, 1, 2, 3 ], # 读取job的信息
+        openc3_job_write         => [       2, 3 ], # 修改job的配置
+        openc3_job_delete        => [       2, 3 ], # 删除job的配置
+        openc3_job_vssh          => [       2, 3 ], # 使用虚拟终端
+        openc3_job_vsshnobody    => [    1, 2, 3 ], # 使用nobody用户的虚拟终端
+        openc3_job_control       => [    1, 2, 3 ], # 操作job
 
-            openc3_agent_read => [ 0, 1, 2, 3 ],  # 读取agent的信息【服务树相关】
-            openc3_agent_write => [ 2, 3 ],       # 修改agent的配置【服务树相关】
-            openc3_agent_delete => [ 2, 3 ],      # 删除agent的配置【服务树相关】
-            openc3_agent_root => [ 3 ],           # agent管理员【服务树无关】
+        openc3_jobx_read         => [ 0, 1, 2, 3 ], # 读取jobx的信息
+        openc3_jobx_write        => [       2, 3 ], # 修改jobx的配置
+        openc3_jobx_delete       => [       2, 3 ], # 删除jobx的配置
+        openc3_jobx_control      => [    1, 2, 3 ], # 操作jobx
 
-            openc3_connector_read => [ 0, 1, 2, 3 ], #读取connector的信息【服务树相关】
-            openc3_connector_write => [ 2, 3 ],      # 修改conector的配置【服务树相关】
-            openc3_connector_delete => [ 2, 3 ],     # 删除connector的配置【服务树相关】
-            openc3_connector_root => [ 3 ],          # connector管理员【服务树无关】
-        );
+        openc3_ci_read           => [ 0, 1, 2, 3 ], # 读取ci的信息
+        openc3_ci_write          => [       2, 3 ], # 修改ci的配置
+        openc3_ci_delete         => [       2, 3 ], # 删除ci的配置
+        openc3_ci_control        => [    1, 2, 3 ], # 操作ci
+
+        openc3_agent_read        => [ 0, 1, 2, 3 ], # 读取agent的信息
+        openc3_agent_write       => [       2, 3 ], # 修改agent的配置
+        openc3_agent_delete      => [       2, 3 ], # 删除agent的配置
+
+        openc3_connector_read    => [ 0, 1, 2, 3 ], # 读取connector的信息
+        openc3_connector_write   => [       2, 3 ], # 修改conector的配置
+        openc3_connector_delete  => [       2, 3 ], # 删除connector的配置
+    );
 
 ```
 
