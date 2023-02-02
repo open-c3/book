@@ -2,7 +2,7 @@
 set -e
 
 rm -rf open-c3.github.io
-gitbook build
+./build.sh
 git clone git@github.com:open-c3/open-c3.github.io.git
 
 rm -rf open-c3.github.io/*
