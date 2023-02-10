@@ -2,6 +2,8 @@
 
 * [介绍](README.md)
 
+* [其它资料](/其它资料/README.md)
+
 * [安装](/安装/README.md)
     * [体验版](/体验版安装/README.md)
     * [单机版](/单机版安装/README.md)
