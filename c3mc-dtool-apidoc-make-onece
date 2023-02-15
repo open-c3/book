@@ -10,8 +10,10 @@ $|++;
 
 =cut
 
-my ( $file, $detail ) = @ARGV;
+my ( $file ) = @ARGV;
 die "nofile" unless $file && -f $file;
+
+my $prefix = $file =~ m#/([a-zA-Z\d+]+)/lib/api/# ? sprintf( "http://127.0.0.1/api/%s", lc $1 ) : '';
 
 my    @x = `cat '$file'`;
 chomp @x;
@@ -74,6 +76,51 @@ sub findpod
 
 map{ $pod{$_} = findpod( $from{$_} -1 , $idx{$_} -1 ) }keys %idx;
 
+# to 记录着API 的下一个结尾的行号
+my %to;
+sub getto
+{
+    my $to = shift @_;
+    my $res = $to;
+    for my $i ( $to .. @x )
+    {
+        my $x = $x[$i-1];
+
+        if( $x eq '};' )
+        {
+            $res = $i;
+            last;
+        }
+    }
+    return $res;
+}
+
+for my $api ( keys %idx )
+{
+    $to{$api} = getto( $idx{$api} );
+}
+
+# param 保存对应API的param内容
+my %param;
+
+sub findparam
+{
+    my ( $from, $to, @res, $start ) = @_;
+    for( $from .. $to )
+    {
+        my $row = $x[$_];
+        my $tmp = $row;
+        $tmp =~ s/\s*//g;
+        last                if $tmp eq ')->check(%$param);';
+        push @res, $raw[$_] if $start;
+        $start = 1          if $tmp eq 'my$error=Format->new(';
+    }
+
+    return \@res;
+}
+
+map{ $param{$_} = findparam( $idx{$_} -1, $to{$_} -1 ) }keys %idx;
+
 for my $api ( sort{ $idx{$a} <=> $idx{$b} }keys %idx )
 {
     my @cont = @{$pod{$api}};
@@ -89,7 +136,15 @@ for my $api ( sort{ $idx{$a} <=> $idx{$b} }keys %idx )
     $title =~ s/\s*//g;
     print "## $title\n";
 
+    my $rapi = $api;
+    $rapi =~ s/'\//$prefix\//;
     print "```\n";
-    print join "\n", "API: $api", @cont;
+    map{ print "$_\n"; } "API: $rapi", @cont;
+
+    if( @{$param{$api}} )
+    {
+        print "\nParam:\n";
+        map{ print "$_\n" }@{$param{$api}};
+    }
     print "\n```\n\n";
 }
