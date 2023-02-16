@@ -17,7 +17,7 @@ chomp @x;
 my %data;
 for my $x ( @x )
 {
-    my @cont = `./c3mc-dtool-apidoc-make-onece '$x'`;
+    my @cont = `/opt/mydan/perl/bin/perl open-c3-code_/Connector/pp/dtool/c3mc-dtool-apidoc-make-onece '$x'`;
     die "task error: $!" if $?;
     chomp @cont;
 
@@ -27,6 +27,6 @@ for my $x ( @x )
     push @{$data{$title}}, @cont;
 }
 
-print "# 系统/接口文档\n\n";
+print "# API/文档\n\n";
 
 map{  map{ print "$_\n" }@{$data{$_}}; }sort keys %data;
