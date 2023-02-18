@@ -10,4 +10,9 @@ if [ "X$X" == "X1" ];then
 else
     TITLE=`echo $FILE|sed 's/.md//'|sed 's/\/README//'|sed 's/open-c3-code\///'`
 fi
-echo "$TITLE /$FILE"
+
+XX=`echo "$TITLE"|grep -v "/x$"|wc -l`
+
+if [ "X$XX" == "X1" ]; then
+    echo "$TITLE /$FILE"
+fi
