@@ -3,6 +3,8 @@
 echo "# C3MC/文档";
 echo "";
 
+export C3GITBASEURL='https://github.com/open-c3/open-c3/blob/v2.6.0'
+
 find open-c3-code_/Connector/pp -name "c3mc-*" | sort | xargs -i{} bash -c "/opt/mydan/perl/bin/perl open-c3-code_/Connector/pp/dtool/c3mc-dtool-c3mcdoc-make-onece  {} || exit 255"
 
 exit 0
