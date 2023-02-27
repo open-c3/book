@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "# C3MC/文档";
+echo "";
+
+find open-c3-code_/Connector/pp -name "c3mc-*" | sort | xargs -i{} bash -c "/opt/mydan/perl/bin/perl open-c3-code_/Connector/pp/dtool/c3mc-dtool-c3mcdoc-make-onece  {} || exit 255"
+
+exit 0
