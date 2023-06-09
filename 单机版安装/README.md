@@ -35,16 +35,6 @@ Creating c3_openc3-server_1 ... done
 ```
 注：程序安装后会产生两个目录，/data/open-c3用于存放代码，/data/open-c3-data用于存放数据【包括数据库数据，日志等】。
 
-## 更新服务
-```
-[root@open-c3 ~]# /data/open-c3/open-c3.sh upgrade                       #更新服务
-
-#如果服务异常，可以执行下面命令尝试修复
-[root@open-c3 ~]# /data/open-c3/open-c3.sh dup                           #更新表结构
-[root@open-c3 ~]# /data/open-c3/Installer/scripts/single/v2.6.1.sh       #执行环境初始化，补充模块
-[root@open-c3 ~]# /data/open-c3/open-c3.sh start                         #重新启动一次服务
- 
-```
 ## 通过浏览器访问服务
 
 通过 http://10.10.10.10 访问服务
