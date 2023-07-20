@@ -4,6 +4,7 @@ set -e
 cp _SUMMARY.md SUMMARY.md
 rm -rf open-c3-code_ open-c3-code
 git clone -b v2.6.0 git@github.com:open-c3/open-c3.git open-c3-code_
+find open-c3-code_ -type l -exec rm {} \;
 
 ./c3mc-dtool-apidoc-make-sort > open-c3-code_/api.md
 ./c3mc-dtool-c3mcdoc-make     > open-c3-code_/c3mcdoc.md
