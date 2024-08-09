@@ -14,6 +14,15 @@
 <source id="mp4" src="/video/OPEN-C3体验版演示.mp4" type="video/mp4">
 </video>
 
+# 用户指南
+
+为了让用户更方便的使用和维护Open-C3，作者提供了用户指南。
+
+* 海外下载地址: [点击下载](https://github.com/open-c3/open-c3-guide/raw/main/Open-C3-User-Guide.docx)
+* 国内下载地址: [点击下载](https://gitee.com/open-c3/open-c3-guide/raw/main/Open-C3-User-Guide.docx)
+
+注：【用户手册在持续完善中】
+
 # 社区
 
 点击查看[社区](/社区/README.md)情况，可以扫描二维码添加open-c3微信。
